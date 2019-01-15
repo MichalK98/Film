@@ -18,6 +18,9 @@
             </div>
         </nav>
         <router-view />
+        <footer>
+            Footer
+        </footer>
     </div>
 </template>
 
@@ -41,6 +44,12 @@
 
     #nav a.router-link-exact-active {
         color: #42b983;
+    }
+    
+    footer {
+        width: 100%;
+        height: 100px;
+        background-color: red;
     }
 
 </style>

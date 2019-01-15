@@ -1,23 +1,35 @@
 <template>
     <div>
         <div class="movieTimeContainer">
-           <h5>12:30</h5>
-           <hr>
-            <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                <h2>Titel</h2>
-                <div class="corner"><span>More</span></div>
-            </div>
-            <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                <h2>Titel</h2>
-                <div class="corner"><span>More</span></div>
+            <h5>12:30</h5>
+            <hr>
+            <div class="movieGridContainer">
+                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                    <h2>Titel</h2>
+                    <div class="corner"><span>More</span></div>
+                </div>
+                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                    <h2>Titel</h2>
+                    <div class="corner"><span>More</span></div>
+                </div>
+                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                    <h2>Titel</h2>
+                    <div class="corner"><span>More</span></div>
+                </div>
             </div>
         </div>
         <div class="movieTimeContainer">
-           <h5>20:45</h5>
-           <hr>
-            <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                <h2>Titel</h2>
-                <div class="corner"><span>More</span></div>
+            <h5>20:45</h5>
+            <hr>
+            <div class="movieGridContainer">
+                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                    <h2>Titel</h2>
+                    <div class="corner"><span>More</span></div>
+                </div>
+                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                    <h2>Titel</h2>
+                    <div class="corner"><span>More</span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -37,30 +49,36 @@
 </script>
 
 <style>
-    
-    .movieTimeContainer{
+    .movieTimeContainer {
         margin: 15px;
         background-color: grey;
     }
-    
-    .movieTimeContainer h5{
+
+    .movieTimeContainer h5 {
         text-align: left;
         color: white;
         padding: 30px 30px 0px;
     }
-    
-    .movieTimeContainer hr{
+
+    .movieTimeContainer hr {
         background-color: white;
         margin: 0 30px;
     }
 
+    .movieGridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
     .movieContainer {
-        margin: 30px;
+        margin: 15px auto;
         background-size: cover;
         background-position: center;
         position: relative;
         background-color: grey;
-        min-height: 700px;
+        width: calc(100% - 60px);
+        max-width: 400px;
+        min-height: 600px;
     }
 
     .corner {
@@ -84,5 +102,12 @@
         display: block;
         color: white;
     }
+    
+    @media screen and (max-width: 900px) {
+  .movieGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
 
 </style>
