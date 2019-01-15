@@ -22,7 +22,7 @@ npm run test
 
 ### Lints and fixes files
 ```
-npm run lint Hussein
+npm run lint Hussein amsapsd
 ```
 
 ### Customize configuration
