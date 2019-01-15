@@ -1,39 +1,26 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <div>
+        <div class="movieTimeContainer">
+           <h5>12:30</h5>
+           <hr>
+            <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                <h2>Titel</h2>
+                <div class="corner"><span>More</span></div>
+            </div>
+            <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                <h2>Titel</h2>
+                <div class="corner"><span>More</span></div>
+            </div>
         </div>
-    </nav>
+        <div class="movieTimeContainer">
+           <h5>20:45</h5>
+           <hr>
+            <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
+                <h2>Titel</h2>
+                <div class="corner"><span>More</span></div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -48,3 +35,54 @@
     }
 
 </script>
+
+<style>
+    
+    .movieTimeContainer{
+        margin: 15px;
+        background-color: grey;
+    }
+    
+    .movieTimeContainer h5{
+        text-align: left;
+        color: white;
+        padding: 30px 30px 0px;
+    }
+    
+    .movieTimeContainer hr{
+        background-color: white;
+        margin: 0 30px;
+    }
+
+    .movieContainer {
+        margin: 30px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        background-color: grey;
+        min-height: 700px;
+    }
+
+    .corner {
+        width: 0;
+        height: 0;
+        border-bottom: 150px solid red;
+        border-top: 150px solid transparent;
+        border-left: 150px solid transparent;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .corner span {
+        position: absolute;
+        bottom: -110px;
+        width: 100px;
+        left: -100px;
+        text-align: center;
+        font-size: 16px;
+        display: block;
+        color: white;
+    }
+
+</style>
