@@ -22,7 +22,7 @@ npm run test
 
 ### Lints and fixes files
 ```
-npm run lint michal Jashiu
+npm run lint Hussein
 ```
 
 ### Customize configuration
