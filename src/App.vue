@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#"><img src="../public/logo.png" alt="filmXD" width="40px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,9 +21,40 @@
             </div>
         </nav>
         <router-view />
-        <footer>
-            Footer
+        <!-- Footer -->
+        <footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+            <!-- Footer Elements -->
+            <div class="container">
+
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+
+                        <!-- Video -->
+                        <div class="embed-responsive embed-responsive-16by9 mb-4">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1XW1Ygatsz4" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Footer Elements -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> FilmXD.com</a>
+            </div>
+            <!-- Copyright -->
+
         </footer>
+        <!-- Footer -->
     </div>
 </template>
 
@@ -58,21 +89,24 @@
         background-color: rgb(26, 29, 33) !important;
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
     }
-    
-    .navbar-brand, .nav-link {
+
+    .navbar-brand,
+    .nav-link {
         color: white !important;
     }
-    
-    .navbar-toggler-icon{
+
+    .navbar-toggler-icon {
         filter: brightness(0) invert(1);
     }
 
     footer {
-        width: 100%;
-        height: 100px;
         background-color: rgb(26, 29, 33) !important;
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
         color: white;
+    }
+    
+    .footer-copyright.text-center.py-3 {
+        background-color: rgba(0,0,0,.2);
     }
 
 </style>

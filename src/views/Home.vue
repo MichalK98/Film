@@ -9,7 +9,7 @@
             <div class="movieGridContainer">
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
                     <h2>Titel</h2>
-                    <div class="corner"><span>More</span></div>
+                    <div class="corner"><router-link to="/film" class="nav-link"><span>Home</span></router-link></div>
                 </div>
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
                     <h2>Titel</h2>
@@ -106,7 +106,7 @@
     .corner {
         width: 0;
         height: 0;
-        border-bottom: 150px solid rgba(20, 46, 89, .9);
+        border-bottom: 150px solid rgba(224, 52, 17, .9);
         border-top: 150px solid transparent;
         border-left: 150px solid transparent;
         position: absolute;
@@ -115,6 +115,7 @@
     }
 
     .corner span {
+        cursor: pointer;
         position: absolute;
         bottom: -110px;
         width: 100px;
