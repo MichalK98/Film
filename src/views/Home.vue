@@ -1,7 +1,10 @@
 <template>
     <div>
         <div class="movieTimeContainer">
-            <h5>12:30</h5>
+            <div class="movieTime">
+                <h5>12:30</h5>
+                <h5>9/11</h5>
+            </div>
             <hr>
             <div class="movieGridContainer">
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
@@ -19,7 +22,10 @@
             </div>
         </div>
         <div class="movieTimeContainer">
-            <h5>20:45</h5>
+            <div class="movieTime">
+                <h5>20:45</h5>
+                <h5>9/12</h5>
+            </div>
             <hr>
             <div class="movieGridContainer">
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
@@ -51,7 +57,7 @@
 <style>
     .movieTimeContainer {
         margin: 15px;
-        background-color: grey;
+        background-color: rgba(129, 131, 132, .3);
     }
 
     .movieTimeContainer h5 {
@@ -69,6 +75,18 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    .movieTime {
+        display: flex;
+    }
+    
+    .movieTime h5 {
+        flex: 1;
+    }
+    
+    .movieTime h5:nth-child(2) {
+        text-align: right;
+    }
     
     .movieContainer {
         margin: 15px auto;
@@ -79,12 +97,13 @@
         width: calc(100% - 60px);
         max-width: 400px;
         min-height: 600px;
+        box-shadow: 0px 0px 15px rgb(200, 200, 200);
     }
 
     .corner {
         width: 0;
         height: 0;
-        border-bottom: 150px solid red;
+        border-bottom: 150px solid rgba(20, 46, 89, .9);
         border-top: 150px solid transparent;
         border-left: 150px solid transparent;
         position: absolute;
@@ -102,12 +121,12 @@
         display: block;
         color: white;
     }
-    
+
     @media screen and (max-width: 900px) {
-  .movieGridContainer {
-        display: grid;
-        grid-template-columns: 1fr;
+        .movieGridContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
-}
 
 </style>
