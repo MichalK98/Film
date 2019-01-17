@@ -25,7 +25,7 @@ three years consecutively from 2013 and has been Retailer of the year for 5 cons
         background-size: cover;
         background-position: center;
         position: relative;
-        color: black;
+        color: white;
         width: calc(100% - 60px);
         max-width: 1000px;
         min-height: 600px;
