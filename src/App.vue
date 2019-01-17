@@ -62,6 +62,7 @@
     body {
         background-image: linear-gradient(to bottom right, rgb(2, 38, 71), rgb(52, 114, 145), rgb(6, 15, 22));
         background-size: cover;
+        padding-top: 50px;
     }
 
     #app {
@@ -88,6 +89,11 @@
     .navbar.navbar-expand-lg.navbar-light.bg-light {
         background-color: rgb(26, 29, 33) !important;
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
     }
 
     .navbar-brand,

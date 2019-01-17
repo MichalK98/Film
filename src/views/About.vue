@@ -20,6 +20,7 @@
 </script>
 
 <style>
+    
     .aboutContainer {
         margin: 15px auto;
         background-size: cover;

@@ -1,5 +1,8 @@
 <template>
     <div>
+       <div class="commingSoon">
+           <img class="commingSoonImg" src="https://images.alphacoders.com/954/954739.jpg" alt="Comming Soon" width="100%">
+       </div>
         <div class="movieTimeContainer">
             <div class="movieTime">
                 <h5>12:30</h5>
@@ -9,7 +12,7 @@
             <div class="movieGridContainer">
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
                     <h2>Titel</h2>
-                    <div class="corner"><router-link to="/film" class="nav-link"><span>Home</span></router-link></div>
+                    <div class="corner"><router-link to="/film" class="nav-link"><span>More</span></router-link></div>
                 </div>
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
                     <h2>Titel</h2>
@@ -55,8 +58,11 @@
 
 </script>
 
-<style>
-
+<style>    
+    .commingSoonImg{
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+        
+    }
 
     .movieTimeContainer {
         margin: 15px;
