@@ -1,6 +1,6 @@
 <template>
     <div class="booking">
-        <h1>hej</h1>
+        <h1>hej test</h1>
     </div>
 </template>
 
