@@ -138,5 +138,12 @@
             grid-template-columns: 1fr;
         }
     }
+    
+    @media screen and (min-width: 1400px) {
+        .movieGridContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
 
 </style>
