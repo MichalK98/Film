@@ -14,6 +14,9 @@
                     <li class="nav-item">
                         <router-link to="/about" class="nav-link">About</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link to="/booking" class="nav-link">Booking</router-link>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -25,6 +28,11 @@
 </template>
 
 <style>
+    body {
+        background-image: linear-gradient(to bottom right, rgb(2, 38, 71), rgb(52, 114, 145), rgb(6, 15, 22));
+        background-size: cover;
+    }
+
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -45,11 +53,26 @@
     #nav a.router-link-exact-active {
         color: #42b983;
     }
+
+    .navbar.navbar-expand-lg.navbar-light.bg-light {
+        background-color: rgb(26, 29, 33) !important;
+        box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
+    }
     
+    .navbar-brand, .nav-link {
+        color: white !important;
+    }
+    
+    .navbar-toggler-icon{
+        filter: brightness(0) invert(1);
+    }
+
     footer {
         width: 100%;
         height: 100px;
-        background-color: red;
+        background-color: rgb(26, 29, 33) !important;
+        box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
+        color: white;
     }
 
 </style>
