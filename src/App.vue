@@ -59,10 +59,16 @@
 </template>
 
 <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
     body {
         background-image: linear-gradient(to bottom right, rgb(2, 38, 71), rgb(52, 114, 145), rgb(6, 15, 22));
         background-size: cover;
-        padding-top: 50px;
+        padding-top: 62px;
+    }
+    
+    * {
+        font-family: 'Montserrat', sans-serif;
     }
 
     #app {
@@ -90,7 +96,7 @@
         background-color: rgb(26, 29, 33) !important;
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
         position: fixed;
-        z-index: 1;
+        z-index: 2147483647;
         left: 0;
         right: 0;
         top: 0;
@@ -110,9 +116,9 @@
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
         color: white;
     }
-    
+
     .footer-copyright.text-center.py-3 {
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0, 0, 0, .2);
     }
 
 </style>
