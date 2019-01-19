@@ -26,7 +26,12 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+      <!-- <div class="kommandeFilmGridContainer">
+  <div class="kommandeFilmerContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg'); ">
+    
   </div>
+</div> -->
+</div>
 </template>
 
 <script>
