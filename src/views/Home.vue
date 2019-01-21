@@ -1,5 +1,15 @@
 <template>
     <div>
+        <ul v-for="(item, i) in items"
+			:key="i">
+			<li>
+				<img v-bind:src="item.images[0]" width="200" height="200">
+				 <div>{{item.title}}</div>
+					<div>{{item.length}}</div>
+					<div>{{item.aptDate}}</div>
+					<div>{{item.aptNotes}}</div>
+			</li>
+		</ul>
         <div class="commingSoon">
             <img class="commingSoonImg" src="https://images.alphacoders.com/954/954739.jpg" alt="Comming Soon" width="100%">
         </div>
@@ -68,7 +78,16 @@
 </template>
 
 <script>
+    import movies from '../assets/json/movies.json'
 
+        export default {
+    name: 'hello',
+    data () {
+        return {
+                items: movies
+        }
+    }
+    }
 </script>
 
 <style>
