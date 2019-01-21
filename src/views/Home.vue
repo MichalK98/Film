@@ -77,10 +77,11 @@
         <div class="kommandeFilmGridContainer">
             <h1>Kommande film</h1>
             <div class="row">
-                <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');" >
-                    <h2>16 januari</h2>
+                <div v-for="(kommandeFilmer, i) in kommandeFilmer"
+			    :key="i" class="kommandeFilmContainer" :style="{ backgroundImage: `url('${kommandeFilmer.image}')` }">
+                    <h2>{{kommandeFilmer.title}}</h2>
                 </div>
-                <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');">
+                <!-- <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');">
                     <h2>16 januari</h2>
                 </div>
                 <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');">
@@ -88,7 +89,7 @@
                 </div>
                 <div class="kommandeFilmContainer">
                     <h2>16 januari</h2>
-                </div>
+                </div> -->
 
             </div>              
         </div>
@@ -97,12 +98,15 @@
 
 <script>
     import movies from '../assets/json/movies.json'
+    import kommandeFilmer from '../assets/json/kommandeFilmer.json'
 
         export default {
     name: 'hello',
     data () {
         return {
-                items: movies
+                items: movies,
+                kommandeFilmer: kommandeFilmer
+
         }
     }
     }
