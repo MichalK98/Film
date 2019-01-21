@@ -74,7 +74,7 @@
             </div>
         </div>
     
-        <div class="kommandeFilmGridContainer">
+        <div class="movieGridContainer">
             <h1>Kommande film</h1>
             <div class="row">
                 <div v-for="(kommandeFilmer, i) in kommandeFilmer"
@@ -109,7 +109,7 @@
 
         }
     }
-    }
+}
 </script>
 
 <style>
