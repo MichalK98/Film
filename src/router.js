@@ -37,6 +37,30 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "booking" */ './views/Film.vue')
+    },
+    {
+      path: '/x-men-about',
+      name: 'x men about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "booking" */ './views/X-men-about.vue')
+    },
+    {
+      path: '/king-kong-about',
+      name: 'king kong about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "booking" */ './views/King-kong-about.vue')
+    },
+    {
+      path: '/call-me-by-your-name-about',
+      name: 'call me by your name about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "booking" */ './views/Call-me-by-your-name-about.vue')
     }
   ]
 })
