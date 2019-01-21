@@ -1,18 +1,18 @@
 [
-    {   
-        "title": "Star is born",
-
-        "image": "https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg"
-    
-    },
-    {   
-        "title": "Star wars",
-
-        "image": [
-        "insert link here"
-
-        ]
-    
-    }
-
+  {
+    "title": "Star is born",
+    "image": "https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwi1-Ie09_7fAhUSh6YKHcJOCPAQjRx6BAgBEAU&url=http%3A%2F%2Fwww.movienewsletters.net%2Fphotos%2FSWE_241805R1.jpg&psig=AOvVaw0q-LYO3-ad0FyMQo2P46Eh&ust=1548162104870034"
+  },
+  {
+    "title": "Bird Box",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Bird_Box_%28film%29.png/220px-Bird_Box_%28film%29.png"
+  },
+  {
+    "title": "Bee",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51gLhqKDXkL._SY445_.jpg"
+  },
+  {
+    "title": "Snowden",
+    "image": "https://i1.wp.com/www.snowdenfilm.com/wp-content/uploads/2018/02/Snowden-PosterArt.jpg?fit=344%2C485&ssl=1"
+  }
 ]
