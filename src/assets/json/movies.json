@@ -1,143 +1,36 @@
 [
     {
-      "title": "Call me by your name",
-      "productionCountries": [
-        "Italien",
-        "USA"
+        "title": "Glass",
+        "productionYear": 2019,
+        "length": "2 tim 9 min",
+        "genre": "Drama, Sci-Fi",
+        "age-restricton": "15 years",
+        "language": "engelska",
+        "subtitles": "svenska",
+        "director": "M. Night Shyamalan",
+        "actors": [
+        "James McAvoy", "Anya Taylor-Joy", "Bruce Willis", "Samuel L. Jackson", "Spencer Treat Clark", "Charlayne Woodard", "Sarah Paulson"
       ],
-      "productionYear": 2017,
-      "length": 132,
-      "genre": "Drama",
-      "distributor": "UIP",
-      "language": "engelska",
-      "subtitles": "svenska",
-      "director": "Luca Guadagnino",
-      "actors": [
-        "Armie Hammer",
-        "Timothée Chalamet",
-        "Michael Stuhlbarg"
-      ],
-      "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
-      "images": [
-         "call-me-poster1.jpg",
-         "call-me-poster2.jpg"
-      ],
-      "youtubeTrailers": [
-        "Z9AYPxH5NTM"
-      ], 
-      "reviews": [
-        {
-          "source": "Sydsvenskan",
-          "quote": "ett drama berättat med stor ömhet",
-          "stars": 4,
-          "max": 5
-        },
-        {
-          "source": "Svenska Dagbladet",
-          "quote": "en film att förälska sig i",
-          "stars": 5,
-          "max": 5
-        },
-        {
-          "source": "DN",
-          "quote": "en het romans i åttiotalskostym",
-          "stars": 4,
-          "max": 5
-        }
-      ]
+        "description": "<p>Glass tar vid där Split slutade och Dunn jagar nu Crumbs övernaturliga alter ego The Beast i en allt intensivare jakt. I skuggorna väntar Price, som sitter inne med avgörande hemligheter rörande de bägge männen. Från Unbreakable ser vi återigen Bruce Willis i rollen som David Dunne och Samuel L. Jackson som Elija Price, även känd under sin pseudonymen Mr Glass. James McAvoy återvänder från Split och repriserar sin roll som Kevin Wendell Crump och alla de olika personligheter som finns inom honom. Även Anya Taylor-Joy, som spelade Casey Cooke, den enda fången som överlevde mötet med The Beast, återkommer i sin roll.</p>",
+        "images": "https://i.pinimg.com/originals/c2/17/a7/c217a73e2cc8edb088f4d6147c58cf1b.jpg",
+        "youtubeTrailers": 
+        "95ghQs5AmNk"
     },
     {
-        "title": "X-Men",
-        "productionCountries": [
-          "Italien",
-          "USA"
-        ],
-        "productionYear": 2017,
-        "length": 132,
-        "genre": "Drama",
-        "distributor": "UIP",
+        "title": "Bohemian Rhapsody",
+        "productionYear": 2019,
+        "length": "2 tim 14 min",
+        "genre": "Biografi, Drama, Musik",
+        "age-restricton": "15 år",
         "language": "engelska",
         "subtitles": "svenska",
-        "director": "Luca Guadagnino",
+        "director": "Bryan Singer",
         "actors": [
-          "Armie Hammer",
-          "Timothée Chalamet",
-          "Michael Stuhlbarg"
-        ],
-        "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
-        "images": [
-           "call-me-poster1.jpg",
-           "call-me-poster2.jpg"
-        ],
-        "youtubeTrailers": [
-          "Z9AYPxH5NTM"
-        ], 
-        "reviews": [
-          {
-            "source": "Sydsvenskan",
-            "quote": "ett drama berättat med stor ömhet",
-            "stars": 4,
-            "max": 5
-          },
-          {
-            "source": "Svenska Dagbladet",
-            "quote": "en film att förälska sig i",
-            "stars": 5,
-            "max": 5
-          },
-          {
-            "source": "DN",
-            "quote": "en het romans i åttiotalskostym",
-            "stars": 4,
-            "max": 5
-          }
-        ]
-      },
-    {
-        "title": "King Kong",
-        "productionCountries": [
-          "Italien",
-          "USA"
-        ],
-        "productionYear": 2017,
-        "length": 132,
-        "genre": "Drama",
-        "distributor": "UIP",
-        "language": "engelska",
-        "subtitles": "svenska",
-        "director": "Luca Guadagnino",
-        "actors": [
-          "Armie Hammer",
-          "Timothée Chalamet",
-          "Michael Stuhlbarg"
-        ],
-        "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
-        "images": [
-           "call-me-poster1.jpg"
-        ],
-        "youtubeTrailers": [
-          "Z9AYPxH5NTM"
-        ], 
-        "reviews": [
-          {
-            "source": "Sydsvenskan",
-            "quote": "ett drama berättat med stor ömhet",
-            "stars": 4,
-            "max": 5
-          },
-          {
-            "source": "Svenska Dagbladet",
-            "quote": "en film att förälska sig i",
-            "stars": 5,
-            "max": 5
-          },
-          {
-            "source": "DN",
-            "quote": "en het romans i åttiotalskostym",
-            "stars": 4,
-            "max": 5
-          }
-        ]
-      }
+        "Rami Malek", "Gwilym Lee", "Ben Hardy", "Joseph Mazzello", "Aidan Gillen", "Lucy Boynton", "Tom Hollander", "Allen Leech"
+      ],
+        "description": "<p>Bohemian Rhapsody är en hyllning till Queen, deras musik och enastående sångare Freddie Mercury, som trotsade stereotyperna, rev upp konventionerna och blev en av världens mest älskade underhållare. Filmen följer bandets explosionsartade uppgång genom deras ikoniska låtar och revolutionerande sound, när bandet nästan splittras på grund av Mercuys urspårade livsstil och den triumfartade återföreningen under Live Aid då Mercury leder bandet i ett av de mäktigaste framträdandena i rockhistorien, samtidigt som han kämpar mot en livshotande sjukdom. Under tiden cementerar de arvet från ett band som fortsätter att inspirera outsiders, drömmare och musikälskare än idag.</p>",
+        "images": "http://karlskogabio.nu/wp-content/uploads/2018/10/Bohemian-Rhapsody.jpg",
+        "youtubeTrailers": 
+        "mP0VHJYFOAU"
+    }
   ]
-  

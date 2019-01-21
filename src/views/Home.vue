@@ -1,15 +1,5 @@
 <template>
     <div>
-        <ul v-for="(item, i) in items"
-			:key="i">
-			<li>
-				<img v-bind:src="item.images[0]" width="200" height="200">
-				 <div>{{item.title}}</div>
-					<div>{{item.length}}</div>
-					<div>{{item.aptDate}}</div>
-					<div>{{item.aptNotes}}</div>
-			</li>
-		</ul>
         <div class="commingSoon">
             <img class="commingSoonImg" src="https://images.alphacoders.com/954/954739.jpg" alt="Comming Soon" width="100%">
         </div>
@@ -25,29 +15,23 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
+        <!--Time container-->
         <div class="movieTimeContainer">
             <div class="movieTime">
                 <h5>12:30</h5>
                 <h5>9/11</h5>
             </div>
             <hr>
+            <!--Movie grid-->
             <div class="movieGridContainer">
-                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                    <h2 class="movieTitel">Titel</h2>
-                    <div class="corner">
-                        <router-link to="/film" class="nav-link"><span>More</span></router-link>
-                    </div>
-                </div>
-                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                    <h2 class="movieTitel">Titel</h2>
-                    <div class="corner">
-                        <router-link to="/film" class="nav-link"><span>More</span></router-link>
-                    </div>
-                </div>
-                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                    <h2 class="movieTitel">Titel</h2>
-                    <div class="corner">
-                        <router-link to="/film" class="nav-link"><span>More</span></router-link>
+                <!--Movie-->
+                <div v-for="(item, i) in items" :key="i">
+                    <div class="movieContainer" :style="{ backgroundImage: `url('${item.images}')` }">
+                        <h2 class="movieTitel">{{item.title}}</h2>
+                        <!--More button-->
+                        <div class="corner">
+                            <router-link to="/film" class="nav-link"><span>More</span></router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,17 +42,16 @@
                 <h5>9/12</h5>
             </div>
             <hr>
+            <!--Movie grid-->
             <div class="movieGridContainer">
-                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                    <h2 class="movieTitel">Titel</h2>
-                    <div class="corner">
-                        <router-link to="/film" class="nav-link"><span>More</span></router-link>
-                    </div>
-                </div>
-                <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
-                    <h2 class="movieTitel">Titel</h2>
-                    <div class="corner">
-                        <router-link to="/film" class="nav-link"><span>More</span></router-link>
+                <!--Movie-->
+                <div v-for="(item, i) in items" :key="i">
+                    <div class="movieContainer" :style="{ backgroundImage: `url('${item.images}')` }">
+                        <h2 class="movieTitel">{{item.title}}</h2>
+                        <!--More button-->
+                        <div class="corner">
+                            <router-link to="/film" class="nav-link"><span>More</span></router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,7 +92,7 @@
 
         }
     }
-    }
+
 </script>
 
 <style>
