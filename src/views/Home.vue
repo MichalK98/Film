@@ -74,7 +74,7 @@
             </div>
         </div>
     
-        <div class="movieGridContainer">
+        <div class="komandeFilmGridContainer">
             <h1>Kommande film</h1>
             <div class="row">
                 <div v-for="(kommandeFilmer, i) in kommandeFilmer"
@@ -201,21 +201,21 @@
         background-color: grey;
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
         }
-    @media screen and (max-width: 900px) {
+    /*@media screen and (max-width: 900px) {
         .kommandeFilmGridContainer{
            height: 720px;
 
         
     }
-    }
-   @media screen and (min-width: 1400px) {
+    }*/
+   /*@media screen and (min-width: 1400px) {
        .kommandeFilmGridContainer{
-                      height: 720px;
+         height: 720px;
 
 
 
         }
-    }
+    }*/
     .movieTime {
         display: flex;
     }
