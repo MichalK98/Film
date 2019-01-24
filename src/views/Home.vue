@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul v-for="(item, i) in items"
+        <!-- <ul v-for="(item, i) in items"
 			:key="i">
 			<li>
 				<img v-bind:src="item.images[0]" width="200" height="200">
@@ -9,10 +9,10 @@
 					<div>{{item.aptDate}}</div>
 					<div>{{item.aptNotes}}</div>
 			</li>
-		</ul>
-        <div class="commingSoon">
+		</ul> -->
+        <!-- <div class="commingSoon">
             <img class="commingSoonImg" src="https://images.alphacoders.com/954/954739.jpg" alt="Comming Soon" width="100%">
-        </div>
+        </div> -->
         <div class="searchContainer">
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -74,36 +74,26 @@
             </div>
         </div>
     
-        <div class="komandeFilmGridContainer">
+        <div class="komandeFilmGridContainer slideshow-container">
             <h1>Kommande film</h1>
             <div class="row">
+
                 <div v-for="(kommandeFilmer, i) in kommandeFilmer"
 			    :key="i" class="kommandeFilmContainer" :style="{ backgroundImage: `url('${kommandeFilmer.image}')` }">
+                <div class="overlay">{{kommandeFilmer.datum}}</div>
                     <h2>{{kommandeFilmer.title}}</h2>
+
                 </div>
-                <!-- <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');">
-                    <h2>16 januari</h2>
-                </div>
-                <div class="kommandeFilmContainer" style="background-image: url('https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwi1-Ie09_7fAhUSh6YKHcJOCPAQjRx6BAgBEAU&url=http%3A%2F%2Fwww.movienewsletters.net%2Fphotos%2FSWE_241805R1.jpg&psig=AOvVaw0q-LYO3-ad0FyMQo2P46Eh&ust=1548162104870034');">
-                    <h2>16 januari</h2>
-                </div>
-                <div class="kommandeFilmContainer">
-                    <h2>16 januari</h2>
-<<<<<<< Updated upstream
-                </div> -->
-<!--                 </div>
- -->                
-<!-- >>>>>>> Stashed changes
- -->
+
+
+            </div>            
             </div>              
-        </div>
     </div>
 </template>
 
 <script>
     import movies from '../assets/json/movies.json'
     import kommandeFilmer from '../assets/json/kommandeFilmer.json'
-
         export default {
     name: 'hello',
     data () {
@@ -178,6 +168,7 @@
         margin-right: 4px !important;
 
       }  
+
     .kommandeFilmContainer h2{
     
     background: #cc0020;
@@ -200,7 +191,30 @@
         background-size: cover;
         background-color: grey;
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
+         position: relative;
+  width: 50%;
+  max-width: 300px;
         }
+        * {box-sizing: border-box;}
+
+        .overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.kommandeFilmContainer:hover .overlay {
+  opacity: 1;
+}
     /*@media screen and (max-width: 900px) {
         .kommandeFilmGridContainer{
            height: 720px;
@@ -283,5 +297,11 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+    
+
+  
+
+  
+
 
 </style>
