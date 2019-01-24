@@ -57,7 +57,7 @@
             </div>
         </div>
     
-        <div class="kommandeFilmGridContainer">
+        <div class="komandeFilmGridContainer">
             <h1>Kommande film</h1>
             <div class="row">
                 <div v-for="(kommandeFilmer, i) in kommandeFilmer"
@@ -67,13 +67,17 @@
                 <!-- <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');">
                     <h2>16 januari</h2>
                 </div>
-                <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');">
+                <div class="kommandeFilmContainer" style="background-image: url('https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwi1-Ie09_7fAhUSh6YKHcJOCPAQjRx6BAgBEAU&url=http%3A%2F%2Fwww.movienewsletters.net%2Fphotos%2FSWE_241805R1.jpg&psig=AOvVaw0q-LYO3-ad0FyMQo2P46Eh&ust=1548162104870034');">
                     <h2>16 januari</h2>
                 </div>
                 <div class="kommandeFilmContainer">
                     <h2>16 januari</h2>
+<<<<<<< Updated upstream
                 </div> -->
-
+<!--                 </div>
+ -->                
+<!-- >>>>>>> Stashed changes
+ -->
             </div>              
         </div>
     </div>
@@ -92,7 +96,7 @@
 
         }
     }
-
+}
 </script>
 
 <style>
@@ -148,12 +152,13 @@
     .kommandeFilmGridContainer {
         margin: 15px;
         background-color: grey;
-        height: 360px;
+        height: 380px;
         border-right: 20px;
         
     }
     .row{
-        margin-left: 8px !important;
+        margin-left: 4px !important;
+        margin-right: 4px !important;
 
       }  
     .kommandeFilmContainer h2{
@@ -161,17 +166,39 @@
     background: #cc0020;
     border-width: 40px;
     right: 0;
-
+    display: flex;
+  text-align: center;
 
 }
-
+ h1{
+    text-align: left;
+    margin: 18px;
+    color: white !important;
+}
     .kommandeFilmContainer {
         margin: 15px;
         height: 300px;
         width: 280px;
-        background-image: url('https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiR-7jW0fTfAhVLBSwKHRkCA9UQjRx6BAgBEAU&url=https%3A%2F%2Fdarkregions.com%2Fproducts%2Fbird-box-special-edition-by-josh-malerman&psig=AOvVaw3xtgniE6S2JInYvDGYskrf&ust=1547808365050728');
-    }
+        margin: 15px auto;
+        background-size: cover;
+        background-color: grey;
+        box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
+        }
+    /*@media screen and (max-width: 900px) {
+        .kommandeFilmGridContainer{
+           height: 720px;
 
+        
+    }
+    }*/
+   /*@media screen and (min-width: 1400px) {
+       .kommandeFilmGridContainer{
+         height: 720px;
+
+
+
+        }
+    }*/
     .movieTime {
         display: flex;
     }
