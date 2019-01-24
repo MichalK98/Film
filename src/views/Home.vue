@@ -2,7 +2,7 @@
     <div>
         <div class="commingSoon">
             <img class="commingSoonImg" src="https://images.alphacoders.com/954/954739.jpg" alt="Comming Soon" width="100%">
-        </div>
+        </div> -->
         <div class="searchContainer">
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -63,6 +63,7 @@
             <div class="row">
                 <div v-for="(kommandeFilmer, i) in kommandeFilmer" :key="i" class="kommandeFilmContainer" :style="{ backgroundImage: `url('${kommandeFilmer.image}')` }">
                     <h2>{{kommandeFilmer.title}}</h2>
+
                 </div>
             </div>
         </div>
@@ -245,5 +246,11 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+    
+
+  
+
+  
+
 
 </style>
