@@ -35,19 +35,19 @@
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
                     <h2 class="movieTitel">Titel</h2>
                     <div class="corner">
-                        <router-link to="/Information-om-filmerna" class="nav-link"><span>More</span></router-link>
+                        <router-link to="/Film" class="nav-link"><span>More</span></router-link>
                     </div>
                 </div>
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
                     <h2 class="movieTitel">Titel</h2>
                     <div class="corner">
-                        <router-link to="/Information-om-filmerna" class="nav-link"><span>More</span></router-link>
+                        <router-link to="/Film" class="nav-link"><span>More</span></router-link>
                     </div>
                 </div>
                 <div class="movieContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_.jpg'); ">
                     <h2 class="movieTitel">Titel</h2>
                     <div class="corner">
-                        <router-link to="/Information-om-filmerna" class="nav-link"><span>More</span></router-link>
+                        <router-link to="/Film" class="nav-link"><span>More</span></router-link>
                     </div>
                 </div>
             </div>
