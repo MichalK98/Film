@@ -30,7 +30,7 @@
                         <h2 class="movieTitel">{{item.title}}</h2>
                         <!--More button-->
                         <div class="corner">
-                            <router-link to="/film" class="nav-link"><span>More</span></router-link>
+                            <router-link to="/film" class="nav-link"><span>Mer</span></router-link>
                         </div>
                     </div>
                 </div>
@@ -56,29 +56,15 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="komandeFilmGridContainer">
             <h1>Kommande film</h1>
+            <hr>
             <div class="row">
-                <div v-for="(kommandeFilmer, i) in kommandeFilmer"
-			    :key="i" class="kommandeFilmContainer" :style="{ backgroundImage: `url('${kommandeFilmer.image}')` }">
+                <div v-for="(kommandeFilmer, i) in kommandeFilmer" :key="i" class="kommandeFilmContainer" :style="{ backgroundImage: `url('${kommandeFilmer.image}')` }">
                     <h2>{{kommandeFilmer.title}}</h2>
                 </div>
-                <!-- <div class="kommandeFilmContainer" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTY1NDc3MzgxNV5BMl5BanBnXkFtZTgwNDc3MTQwNjM@._V1_.jpg');">
-                    <h2>16 januari</h2>
-                </div>
-                <div class="kommandeFilmContainer" style="background-image: url('https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwi1-Ie09_7fAhUSh6YKHcJOCPAQjRx6BAgBEAU&url=http%3A%2F%2Fwww.movienewsletters.net%2Fphotos%2FSWE_241805R1.jpg&psig=AOvVaw0q-LYO3-ad0FyMQo2P46Eh&ust=1548162104870034');">
-                    <h2>16 januari</h2>
-                </div>
-                <div class="kommandeFilmContainer">
-                    <h2>16 januari</h2>
-<<<<<<< Updated upstream
-                </div> -->
-<!--                 </div>
- -->                
-<!-- >>>>>>> Stashed changes
- -->
-            </div>              
+            </div>
         </div>
     </div>
 </template>
@@ -87,16 +73,16 @@
     import movies from '../assets/json/movies.json'
     import kommandeFilmer from '../assets/json/kommandeFilmer.json'
 
-        export default {
-    name: 'hello',
-    data () {
-        return {
+    export default {
+        name: 'hello',
+        data() {
+            return {
                 items: movies,
                 kommandeFilmer: kommandeFilmer
-
+            }
         }
     }
-}
+
 </script>
 
 <style>
@@ -147,58 +133,51 @@
     .movieGridContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
-
     }
-    .kommandeFilmGridContainer {
+    
+    .movieTimeContainer {
         margin: 15px;
-        background-color: grey;
-        height: 380px;
-        border-right: 20px;
-        
+        background-color: rgba(129, 131, 132, .3);
     }
-    .row{
+
+    .row {
         margin-left: 4px !important;
         margin-right: 4px !important;
 
-      }  
-    .kommandeFilmContainer h2{
-    
-    background: #cc0020;
-    border-width: 40px;
-    right: 0;
-    display: flex;
-  text-align: center;
+    }
 
-}
- h1{
-    text-align: left;
-    margin: 18px;
-    color: white !important;
-}
+    .komandeFilmGridContainer{
+        margin: 15px;
+        background-color: rgba(129, 131, 132, .3);
+    }
+    
+    .kommandeFilmContainer h2 {
+        background: rgba(26, 29, 33, .9);
+        border-width: 40px;
+        color: white;
+        font-size: 150%;
+        padding: 5px;
+    }
+    
+    .komandeFilmGridContainer hr {
+        background-color: white;
+        margin: 0 30px;
+    }
+
+    h1 {
+        color: white !important;
+        padding-top: 15px;
+    }
+
     .kommandeFilmContainer {
         margin: 15px;
         height: 300px;
         width: 280px;
         margin: 15px auto;
         background-size: cover;
-        background-color: grey;
         box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
-        }
-    /*@media screen and (max-width: 900px) {
-        .kommandeFilmGridContainer{
-           height: 720px;
-
-        
     }
-    }*/
-   /*@media screen and (min-width: 1400px) {
-       .kommandeFilmGridContainer{
-         height: 720px;
 
-
-
-        }
-    }*/
     .movieTime {
         display: flex;
     }
