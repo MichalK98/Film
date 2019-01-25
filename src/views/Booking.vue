@@ -5,14 +5,14 @@
         <div class="columns">
           <ul class="price">
 
-            <li class="1"><a href="#" class="button" type="button">+</a></li>
+            <li class="1"><a href="#" class="button" v-on:click="toInc">+</a></li>
             <li class="2"><a href="#" class="button">+</a></li>
             <li class="3"><a href="#" class="button">+</a></li>
           </ul>
         </div>
-
-        <p>test{{inc}}</p>
-
+        <button v-on:click="toInc">Öka</button>
+        <button v-on:click="toDec">Minska</button>
+        <p>Test ett {{inc}}</p>
         <br>
 
 <div class="cockpit">
@@ -410,17 +410,19 @@
         components: {
             HelloWorld
         },
-
-        data(){
-          return{
-            inc: 5
+        data() {
+          return {
+            inc: 0
           }
         },
-        methoods: {
-          toInc(){
-            this.inc +=1
-          }
+        methods: {
+        toInc() {
+          this.inc++
+        },
+        toDec() {
+          this.inc--
         }
+      }
     }
 
 </script>
