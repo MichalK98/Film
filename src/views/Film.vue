@@ -15,6 +15,9 @@
           ></iframe>
         </div>
       </div>
+
+      <div class="filmInformation">{{movie.length}} | {{movie.genre}} | {{movie.ageRestricton}} år</div>
+
       <hr class="break">
       <p class="description">{{movie.description}}</p>
     </div>
@@ -62,6 +65,7 @@ export default {
   }
 };
 </script>
+
 <style>
 .info {
   padding-top: 15px;
@@ -69,6 +73,18 @@ export default {
   margin: 15px;
   margin-top: 20px;
   background-color: rgba(129, 131, 132, 0.3);
+}
+
+ul {
+  max-width: 700px;
+}
+
+ul li {
+  color: rgb(216, 216, 216);
+}
+
+ul li b {
+  color: white;
 }
 
 .videoPadding {
@@ -114,8 +130,9 @@ export default {
   margin-bottom: 15px;
 }
 
-ul {
-  max-width: 700px;
+.filmInformation {
+  margin-top: 2.5vh;
+  font-size: 24px;
 }
 
 @media screen and (max-width: 900px) {
