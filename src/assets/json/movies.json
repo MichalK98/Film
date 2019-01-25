@@ -8,13 +8,10 @@
         "language": "engelska",
         "subtitles": "svenska",
         "director": "M. Night Shyamalan",
-        "actors": [
-        "James McAvoy", "Anya Taylor-Joy", "Bruce Willis", "Samuel L. Jackson", "Spencer Treat Clark", "Charlayne Woodard", "Sarah Paulson"
-      ],
-        "description": "<p>Glass tar vid där Split slutade och Dunn jagar nu Crumbs övernaturliga alter ego The Beast i en allt intensivare jakt. I skuggorna väntar Price, som sitter inne med avgörande hemligheter rörande de bägge männen. Från Unbreakable ser vi återigen Bruce Willis i rollen som David Dunne och Samuel L. Jackson som Elija Price, även känd under sin pseudonymen Mr Glass. James McAvoy återvänder från Split och repriserar sin roll som Kevin Wendell Crump och alla de olika personligheter som finns inom honom. Även Anya Taylor-Joy, som spelade Casey Cooke, den enda fången som överlevde mötet med The Beast, återkommer i sin roll.</p>",
+        "actors": "James McAvoy, Anya Taylor-Joy, Bruce Willis, Samuel L. Jackson, Spencer Treat Clark, Charlayne Woodard, Sarah Paulson",
+        "description": "Glass tar vid där Split slutade och Dunn jagar nu Crumbs övernaturliga alter ego The Beast i en allt intensivare jakt. I skuggorna väntar Price, som sitter inne med avgörande hemligheter rörande de bägge männen. Från Unbreakable ser vi återigen Bruce Willis i rollen som David Dunne och Samuel L. Jackson som Elija Price, även känd under sin pseudonymen Mr Glass. James McAvoy återvänder från Split och repriserar sin roll som Kevin Wendell Crump och alla de olika personligheter som finns inom honom. Även Anya Taylor-Joy, som spelade Casey Cooke, den enda fången som överlevde mötet med The Beast, återkommer i sin roll.",
         "images": "https://i.pinimg.com/originals/c2/17/a7/c217a73e2cc8edb088f4d6147c58cf1b.jpg",
-        "youtubeTrailers": 
-        "95ghQs5AmNk"
+        "youtubeTrailers": "95ghQs5AmNk"
     },
     {
         "title": "Bohemian Rhapsody",
@@ -25,12 +22,9 @@
         "language": "engelska",
         "subtitles": "svenska",
         "director": "Bryan Singer",
-        "actors": [
-        "Rami Malek", "Gwilym Lee", "Ben Hardy", "Joseph Mazzello", "Aidan Gillen", "Lucy Boynton", "Tom Hollander", "Allen Leech"
-      ],
-        "description": "<p>Bohemian Rhapsody är en hyllning till Queen, deras musik och enastående sångare Freddie Mercury, som trotsade stereotyperna, rev upp konventionerna och blev en av världens mest älskade underhållare. Filmen följer bandets explosionsartade uppgång genom deras ikoniska låtar och revolutionerande sound, när bandet nästan splittras på grund av Mercuys urspårade livsstil och den triumfartade återföreningen under Live Aid då Mercury leder bandet i ett av de mäktigaste framträdandena i rockhistorien, samtidigt som han kämpar mot en livshotande sjukdom. Under tiden cementerar de arvet från ett band som fortsätter att inspirera outsiders, drömmare och musikälskare än idag.</p>",
+        "actors": "Rami Malek, Gwilym Lee, Ben Hardy, Joseph Mazzello, Aidan Gillen, Lucy Boynton, Tom Hollander, Allen Leech",
+        "description": "Bohemian Rhapsody är en hyllning till Queen, deras musik och enastående sångare Freddie Mercury, som trotsade stereotyperna, rev upp konventionerna och blev en av världens mest älskade underhållare. Filmen följer bandets explosionsartade uppgång genom deras ikoniska låtar och revolutionerande sound, när bandet nästan splittras på grund av Mercuys urspårade livsstil och den triumfartade återföreningen under Live Aid då Mercury leder bandet i ett av de mäktigaste framträdandena i rockhistorien, samtidigt som han kämpar mot en livshotande sjukdom. Under tiden cementerar de arvet från ett band som fortsätter att inspirera outsiders, drömmare och musikälskare än idag.",
         "images": "http://karlskogabio.nu/wp-content/uploads/2018/10/Bohemian-Rhapsody.jpg",
-        "youtubeTrailers": 
-        "mP0VHJYFOAU"
+        "youtubeTrailers": "mP0VHJYFOAU"
     }
   ]

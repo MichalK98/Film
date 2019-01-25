@@ -30,7 +30,7 @@
                         <h2 class="movieTitel">{{item.title}}</h2>
                         <!--More button-->
                         <div class="corner">
-                            <router-link to="/film" class="nav-link"><span>Mer</span></router-link>
+                            <router-link :to="'/film/' + i" class="nav-link"><span>Mer</span></router-link>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                         <h2 class="movieTitel">{{item.title}}</h2>
                         <!--More button-->
                         <div class="corner">
-                            <router-link to="/film" class="nav-link"><span>More</span></router-link>
+                            <router-link :to="'/film/' + i" class="nav-link"><span>Mer</span></router-link>
                         </div>
                     </div>
                 </div>

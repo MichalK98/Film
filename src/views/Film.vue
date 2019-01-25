@@ -1,36 +1,41 @@
 <template>
     <div class="info">
         <div class="title">
-            <h2 class="display-4 infoTitel">X-Men: Apocalypse</h2>
+            <h2 class="display-4 infoTitel">{{movie.title}}</h2>
             <hr class="break">
             <div class="videoPadding">
                 <div class="videoWrapper">
-                    <iframe width=560 height="349" src="https://www.youtube.com/embed/COvnHv42T-A" frameborder="5" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    <iframe width=560 height="349" :src="'https://www.youtube.com/embed/' + movie.youtubeTrailers" frameborder="5" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </div>
             <hr class="break">
-            <p class="description">
-                Raven Darkholme / Mystique som fått veta vad som hänt hennes vän Magneto, försöker spåra upp honom och tar hjälp av Charles Xavier och hans telepatiförstärkningsmaskin, Cerebro. När En Sabah Nur känner Xaviers kraft ger det honom möjlighet att styra varenda människa på jorden och han bryter sig därför in på Xaviers skola och kidnappar Xavier.</p>
-
+            <p class="description">{{movie.description}}</p>
         </div>
         <ul class="infoList">
-            <li><b>Produktion Länder: </b>USA</li>
-            <li><b>Produktion År: </b>2016</li>
-            <li><b>Längd:</b> 147min</li>
-            <li><b>Genre: </b>Action, Äventyr, Science Fiction</li>
-            <li><b>Distribution: </b> Marvel Studios</li>
-            <li><b>Språk:</b> Engelska</li>
-            <li><b>Undertext:</b> Svenska</li>
-            <li><b>Producent:</b> Lauren Shuler Donner</li>
-            <li><b>Skådespelare:</b> James McAvoy, Michael Fassbender m.m.</li>
+            <li><b>Produktion År: </b>{{movie.productionYear}}</li>
+            <li><b>Längd: </b>{{movie.length}}</li>
+            <li><b>Genre: </b>{{movie.genre}}</li>
+            <li><b>Språk:</b> {{movie.language}}</li>
+            <li><b>Undertext:</b> {{movie.subtitles}}</li>
+            <li><b>Producent:</b> {{movie.director}}</li>
+            <li><b>Skådespelare:</b> {{movie.actors}}</li>
 
         </ul>
         <button type="button" class="bookingBtn btn btn-outline-success">Boka Nu</button>
     </div>
 </template>
 
-
+<script>
+    import movies from '../assets/json/movies.json'
+    export default {
+        data() {
+            return {
+                movie: movies[this.$route.params.index]
+            }
+        }
+    }
+</script>
 <style>
     .info {
         padding-top: 15px;
