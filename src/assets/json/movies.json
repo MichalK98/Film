@@ -1,10 +1,9 @@
-[
-    {
+[{
         "title": "Glass",
         "productionYear": 2019,
         "length": "2 tim 9 min",
         "genre": "Drama, Sci-Fi",
-        "age-restricton": "15 years",
+        "ageRestricton": 15,
         "language": "engelska",
         "subtitles": "svenska",
         "director": "M. Night Shyamalan",
@@ -18,7 +17,7 @@
         "productionYear": 2019,
         "length": "2 tim 14 min",
         "genre": "Biografi, Drama, Musik",
-        "age-restricton": "15 år",
+        "ageRestricton": 15,
         "language": "engelska",
         "subtitles": "svenska",
         "director": "Bryan Singer",
@@ -27,4 +26,4 @@
         "images": "http://karlskogabio.nu/wp-content/uploads/2018/10/Bohemian-Rhapsody.jpg",
         "youtubeTrailers": "mP0VHJYFOAU"
     }
-  ]
+]
