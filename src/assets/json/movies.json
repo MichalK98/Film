@@ -1,10 +1,9 @@
-[
-    {
+[{
         "title": "Glass",
         "productionYear": 2019,
         "length": "2 tim 9 min",
         "genre": "Drama, Sci-Fi",
-        "age-restricton": "15 years",
+        "age-restricton": "15",
         "language": "engelska",
         "subtitles": "svenska",
         "director": "M. Night Shyamalan",
@@ -18,7 +17,7 @@
         "productionYear": 2019,
         "length": "2 tim 14 min",
         "genre": "Biografi, Drama, Musik",
-        "age-restricton": "15 år",
+        "age-restricton": "15",
         "language": "engelska",
         "subtitles": "svenska",
         "director": "Bryan Singer",
@@ -26,5 +25,47 @@
         "description": "Bohemian Rhapsody är en hyllning till Queen, deras musik och enastående sångare Freddie Mercury, som trotsade stereotyperna, rev upp konventionerna och blev en av världens mest älskade underhållare. Filmen följer bandets explosionsartade uppgång genom deras ikoniska låtar och revolutionerande sound, när bandet nästan splittras på grund av Mercuys urspårade livsstil och den triumfartade återföreningen under Live Aid då Mercury leder bandet i ett av de mäktigaste framträdandena i rockhistorien, samtidigt som han kämpar mot en livshotande sjukdom. Under tiden cementerar de arvet från ett band som fortsätter att inspirera outsiders, drömmare och musikälskare än idag.",
         "images": "http://karlskogabio.nu/wp-content/uploads/2018/10/Bohemian-Rhapsody.jpg",
         "youtubeTrailers": "mP0VHJYFOAU"
+    },
+    {
+        "title": "Bamse och dunderklockan",
+        "productionYear": 2018,
+        "length": "1 tim 3 min",
+        "genre": "Animerat, Barn",
+        "age-restricton": "3",
+        "language": "Svenska",
+        "subtitles": "Svenska",
+        "director": "Christian Ryltenius",
+        "actors": "Bamse",
+        "description": "Att bara vara sig själv räcker mycket längre än man tror. Det är något som även Reinard Räv skulle må bra av att förstå. Följ med Bamse och hans vänner på ett nytt äventyr både på land och till havs.",
+        "images": "https://mz-prod.s3.amazonaws.com/uploads/photo/file/343026/small_12cd0573b79c8284bdc59b430898eb64-bamse-dunder.jpg",
+        "youtubeTrailers": "wUW3BA_2fLY"
+    },
+    {
+        "title": "Underdog",
+        "productionYear": 2019,
+        "length": "1 tim 51 min",
+        "genre": "Action, Sport",
+        "age-restricton": "15",
+        "language": "Polska",
+        "subtitles": "Svenska",
+        "director": "Maciej Kawalski",
+        "actors": "Eryk Lubos, Mamed Khalidov, Aleksandra Poplawska, Tomasz Wlosok, Janusz Chabior, Emma Giegzno, Jaroslaw Boberek",
+        "description": "Boris \"Kos\" Kosinski är en topp MMA-kämpe. I Kos största match i sin karriär möter han rivalen, Denim Takaev, och gör ett misstag som förstör hela hans karriär. Han förlorar allting. Detta misslyckande ger honom genom en serie upp- och nedgångar, men det pressar honom också till att slåss och vinna tillbaka respekt och kärlek.",
+        "images": "https://biletyna.pl/file/get/id/33604",
+        "youtubeTrailers": "vBGXu2JqeR4"
+    },
+    {
+        "title": "The Favourite",
+        "productionYear": 2019,
+        "length": "1 tim 59 min",
+        "genre": "Biografi, Komedi, Drama",
+        "age-restricton": "11",
+        "language": "Engelska",
+        "subtitles": "Svenska",
+        "director": "Yorgos Lanthimos",
+        "actors": "Olivia Colman, Emma Stone, Rachel Weisz",
+        "description": "Tidigt 1700-tal. England är i krig med Frankrike. Den bräckliga Queen Anne sitter på tronen medan vännen Lady Sarah styr landet samtidigt som hon tampas med Annes sviktande hälsa och kraftiga humörsvängningar. När den nya tjänaren Abigail anländer tar Sarah henne under sina vingar, men då kriget blir tidskrävande för henne kliver Abigail istället in i rollen som drottningens högra hand. Deras spirande vänskap ger henne en chans att återvända till sina aristokratiska rötter där hon inte kommer låta någon kvinna, man, politiker eller kanin stå i vägen.",
+        "images": "https://m.media-amazon.com/images/M/MV5BOTA1MTY0MDYxMF5BMl5BanBnXkFtZTgwNzY5MTk2NjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+        "youtubeTrailers": "SYb-wkehT1g"
     }
-  ]
+]

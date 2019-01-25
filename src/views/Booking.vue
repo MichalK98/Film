@@ -9,7 +9,7 @@
             <li class="2"><a href="#" class="button">+</a></li>
             <li class="3"><a href="#" class="button">+</a></li>
           </ul>
-        </div>
+                         </div>
         <button v-on:click="toInc">Öka</button>
         <button v-on:click="toDec">Minska</button>
         <p>Test ett {{inc}}</p>
@@ -403,13 +403,9 @@
 
 <script>
     // @ is an alias to /src
-    import HelloWorld from '@/components/HelloWorld.vue'
 
     export default {
         name: 'home',
-        components: {
-            HelloWorld
-        },
         data() {
           return {
             inc: 0
