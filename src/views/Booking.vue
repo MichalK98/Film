@@ -4,20 +4,21 @@
       <div class="omslag">
         <div class="transparent">
         <div class="movieImg">
-        <img src="http://www.biocapitol.se/images/astarrecposterjpgposter_330.jpg"></img>
+        <img src="http://www.biocapitol.se/images/astarrecposterjpgposter_330.jpg" width="180px" height="250px">
       </div>
 
 <div class="movieInfo">
   <ul class="infoList">
+    <h1> A Star Is Born</h1>
+    <p>R | 2h 16min | Drama, Music, Romance | 5 October 2018 (USA)</p>
     <li>
-      <b>    <h1>A Star Is Born</h1>
-  R | 2h 16min | Drama, Music, Romance | 5 October 2018 (USA)
-  "auditorium": "Stora Salongen",
-      "film": "Call me by your name",
-      "date": "2018-01-22",
-      "time": "18.40"
-        Produktion År:</b>
-      2018
+      <b>Undertext: Sve Text | Eng Tal</b>
+    </li>
+    <li>
+      <b>Producent: Bradley Cooper</b>
+    </li>
+    <li>
+      <b>Skådespelare: Bradley Cooper, Bradley Cooper, Sam Elliott</b>
     </li>
   </ul>
 </div>
@@ -29,22 +30,30 @@
       <div class="plane">
         <div class="columns">
           <ul class="price">
-
-            <div class="priser1">
+            <div class="prisinfo">
+              <p>Ordinarie (85kr/st)</p>
+            <div class="priser">
             <li class="pris1"><a href="#" class="button" v-on:click="toInc">+</a></li>
-            <p class="pris1">Test ett {{inc}}</p>
+            <p class="prisNummer">{{inc}}</p>
             <li class="pris1"><a href="#" class="button" v-on:click="toDec">-</a></li>
           </div>
-          <div class="priser2">
+        </div>
+        <div class="prisinfo">
+        <p>Barn (65kr/st)</p>
+          <div class="priser">
             <li class="pris2"><a href="#" class="button" v-on:click="toInc2">+</a></li>
-            <p>Test ett {{inc2}}</p>
+            <p class="prisNummer">{{inc2}}</p>
             <li class="pris2"><a href="#" class="button" v-on:click="toDec2">-</a></li>
           </div>
-          <div class="priser3">
+        </div>
+        <div class="prisinfo">
+          <p>Pensionär (75kr/st)</p>
+          <div class="priser">
             <li class="pris3"><a href="#" class="button" v-on:click="toInc3">+</a></li>
-            <p>Test ett {{inc3}}</p>
+            <p class="prisNummer">{{inc3}}</p>
             <li class="pris3"><a href="#" class="button" v-on:click="toDec3">-</a></li>
           </div>
+        </div>
           </ul>
         </div>
 
@@ -355,14 +364,7 @@
         <input type="checkbox" id="7J" />
         <label for="7J"></label>
       </li>
-      <li class="seat4">
-        <input type="checkbox" id="7K" />
-        <label for="7K"></label>
-      </li>
-      <li class="seat4">
-        <input type="checkbox" id="7L" />
-        <label for="7FL"></label>
-      </li>
+
     </ol>
   </li>
   <li class="row row--8">
@@ -407,14 +409,7 @@
         <input type="checkbox" id="8J" />
         <label for="8J"></label>
       </li>
-      <li class="seat4">
-        <input type="checkbox" id="8K" />
-        <label for="8K"></label>
-      </li>
-      <li class="seat4">
-        <input type="checkbox" id="8L" />
-        <label for="8L"></label>
-      </li>
+
     </ol>
   </li>
 
@@ -477,32 +472,35 @@
   box-sizing: border-box;
 }
 
-.columns {
+.booking{
+  color: white;
+  width: 100%;
+}
 
+.infoList{
+  padding-left: 30px;
 }
 
 .price {
-  list-style-type: none;
-
-
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  justify-content: center;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start
 
-
-}
-
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
 }
 
 .omslag{
   background-image: url(https://westernnews.media.clients.ellingtoncms.com/img/photos/2018/10/07/A-Star-is-Born-Trailer.jpg);
   background-position: center;
   color: white;
+  mask-image: linear-gradient(
+   to bottom,
+   rgba(0, 0, 0, 1),
+   rgba(0, 0, 0, 1),
+   rgba(0, 0, 0, 1),
+   rgba(0, 0, 0, 1),
+
+   rgba(0, 0, 0, 0)
+ );
 
 
 }
@@ -511,6 +509,10 @@
   display: flex;
   justify-content: center;
 
+}
+.prisNummer{
+  vertical-align: middle;
+  line-height: 60px
 }
 
 .movieImg{
@@ -524,39 +526,24 @@ text-align: left;
 
 .price li {
 
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
-.priser1{
-  background-color: blue;
+.priser{
+  background-color: rgba(129, 131, 132, 0.3);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   border-radius: 40px;
+  margin: 0 10px;
+  height: 60px;
+
 
 }
 
-.priser2{
-  background-color: green;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  border-radius: 40px;
 
-}
-
-.priser3{
-  background-color: red;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  border-radius: 40px;
-
-}
 
 
 
@@ -578,7 +565,7 @@ text-align: left;
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
-	padding:7px 11px;
+	padding:7px 15px;
 	text-decoration:none;
 	text-shadow:0px 2px 0px #810e05;
 
@@ -592,25 +579,11 @@ text-align: left;
 	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
 	background-color:#f24437;
+  text-decoration: none;
 }
 .button:active {
 	position:relative;
 	top:1px;
-}
-
-
-
-
-
-
-
-
-
-*,*:before,*:after {
-  box-sizing: border-box;
-}
-html {
-  font-size: 16px;
 }
 
 
@@ -667,10 +640,6 @@ ol {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start
-
-
-
-
 
 
 }
@@ -1076,6 +1045,8 @@ padding: 10px;
 
 ul {
   max-width: 700px;
+  list-style-type: none;
+  padding: 0;
 }
 
 ul li {
@@ -1091,6 +1062,30 @@ ul li b {
     flex-direction: column;
 
   }
+  .price {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+  .priser{
+
+    max-width: 130px;
+  }
+
+  .booking{
+    width: 100%;
+    justify-content: center;
+
+  }
+  .movieImg{
+    margin-right: auto;
+  }
+  .movieInfo{
+  text-align: left;
+  padding: 0px;
+  }
+
   }
 
 
