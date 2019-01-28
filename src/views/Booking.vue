@@ -6,13 +6,20 @@
         <div class="movieImg">
         <img src="http://www.biocapitol.se/images/astarrecposterjpgposter_330.jpg"></img>
       </div>
-      <div class="movieInfo">
-        <h1>A Star Is Born</h1>
-<p>R | 2h 16min | Drama, Music, Romance | 5 October 2018 (USA)</p>
-<p>"auditorium": "Stora Salongen",</p>
-    <p>"film": "Call me by your name",</p>
-  <p>  "date": "2018-01-22",</p>
-    <p>"time": "18.40"</P>
+
+<div class="movieInfo">
+  <ul class="infoList">
+    <li>
+      <b>    <h1>A Star Is Born</h1>
+  R | 2h 16min | Drama, Music, Romance | 5 October 2018 (USA)
+  "auditorium": "Stora Salongen",
+      "film": "Call me by your name",
+      "date": "2018-01-22",
+      "time": "18.40"
+        Produktion År:</b>
+      2018
+    </li>
+  </ul>
 </div>
 </div>
       </div>
@@ -29,14 +36,14 @@
             <li class="pris1"><a href="#" class="button" v-on:click="toDec">-</a></li>
           </div>
           <div class="priser2">
-            <li class="pris2"><a href="#" class="button" v-on:click="toInc">+</a></li>
-            <p>Test ett {{inc}}</p>
-            <li class="pris2"><a href="#" class="button" v-on:click="toDec">-</a></li>
+            <li class="pris2"><a href="#" class="button" v-on:click="toInc2">+</a></li>
+            <p>Test ett {{inc2}}</p>
+            <li class="pris2"><a href="#" class="button" v-on:click="toDec2">-</a></li>
           </div>
           <div class="priser3">
-            <li class="pris3"><a href="#" class="button" v-on:click="toInc">+</a></li>
-            <p>Test ett {{inc}}</p>
-            <li class="pris3"><a href="#" class="button" v-on:click="toDec">-</a></li>
+            <li class="pris3"><a href="#" class="button" v-on:click="toInc3">+</a></li>
+            <p>Test ett {{inc3}}</p>
+            <li class="pris3"><a href="#" class="button" v-on:click="toDec3">-</a></li>
           </div>
           </ul>
         </div>
@@ -436,7 +443,9 @@
         name: 'home',
         data() {
           return {
-            inc: 0
+            inc: 0,
+            inc2: 0,
+            inc3: 0,
           }
         },
         methods: {
@@ -445,6 +454,18 @@
         },
         toDec() {
           this.inc--
+        },
+        toInc2() {
+          this.inc2++
+        },
+        toDec2() {
+          this.inc2--
+        },
+        toInc3() {
+          this.inc3++
+        },
+        toDec3() {
+          this.inc3--
         }
       }
     }
@@ -576,6 +597,7 @@ text-align: left;
 	position:relative;
 	top:1px;
 }
+
 
 
 
@@ -1050,6 +1072,18 @@ padding: 10px;
 .rubberBand {
   -webkit-animation-name: rubberBand;
           animation-name: rubberBand;
+}
+
+ul {
+  max-width: 700px;
+}
+
+ul li {
+  color: rgb(216, 216, 216);
+}
+
+ul li b {
+  color: white;
 }
 
 @media screen and (max-width: 900px) {
