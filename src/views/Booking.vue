@@ -1,25 +1,53 @@
 <template>
 
     <div class="booking">
+      <div class="omslag">
+        <div class="transparent">
+        <div class="movieImg">
+        <img src="http://www.biocapitol.se/images/astarrecposterjpgposter_330.jpg"></img>
+      </div>
+      <div class="movieInfo">
+        <h1>A Star Is Born</h1>
+<p>R | 2h 16min | Drama, Music, Romance | 5 October 2018 (USA)</p>
+<p>"auditorium": "Stora Salongen",</p>
+    <p>"film": "Call me by your name",</p>
+  <p>  "date": "2018-01-22",</p>
+    <p>"time": "18.40"</P>
+</div>
+</div>
+      </div>
+      <h2>Antalet biljetter</h2>
+      <p>Välj din biljett nedan</p>
+
       <div class="plane">
         <div class="columns">
           <ul class="price">
 
-            <li class="1"><a href="#" class="button" v-on:click="toInc">+</a></li>
-            <li class="2"><a href="#" class="button">+</a></li>
-            <li class="3"><a href="#" class="button">+</a></li>
+            <div class="priser1">
+            <li class="pris1"><a href="#" class="button" v-on:click="toInc">+</a></li>
+            <p class="pris1">Test ett {{inc}}</p>
+            <li class="pris1"><a href="#" class="button" v-on:click="toDec">-</a></li>
+          </div>
+          <div class="priser2">
+            <li class="pris2"><a href="#" class="button" v-on:click="toInc">+</a></li>
+            <p>Test ett {{inc}}</p>
+            <li class="pris2"><a href="#" class="button" v-on:click="toDec">-</a></li>
+          </div>
+          <div class="priser3">
+            <li class="pris3"><a href="#" class="button" v-on:click="toInc">+</a></li>
+            <p>Test ett {{inc}}</p>
+            <li class="pris3"><a href="#" class="button" v-on:click="toDec">-</a></li>
+          </div>
           </ul>
-                         </div>
-        <button v-on:click="toInc">Öka</button>
-        <button v-on:click="toDec">Minska</button>
-        <p>Test ett {{inc}}</p>
-        <br>
+        </div>
+
+
 
 <div class="cockpit">
 
 
   <h2>Stora Salongen</h2>
-  <h5>Vänligen välj dina platser nedanstående</h5>
+  <p>Vänligen välj dina platser nedanstående</p>
 </div>
 
 <div class="exit exit--front fuselage">
@@ -434,10 +462,8 @@
 
 .price {
   list-style-type: none;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  margin: 0;
-  padding: 0;
+
+
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: flex;
@@ -445,19 +471,70 @@
   flex-wrap: nowrap;
   justify-content: flex-start
 
+
 }
 
 .price:hover {
   box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
 }
 
+.omslag{
+  background-image: url(https://westernnews.media.clients.ellingtoncms.com/img/photos/2018/10/07/A-Star-is-Born-Trailer.jpg);
+  background-position: center;
+  color: white;
 
 
+}
+.transparent{
+  background: rgba(26, 29, 33, 0.6);
+  display: flex;
+  justify-content: center;
+
+}
+
+.movieImg{
+padding: 30px;
+
+}
+.movieInfo{
+padding: 30px;
+text-align: left;
+}
 
 .price li {
 
   padding: 20px;
   text-align: center;
+}
+
+.priser1{
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 40px;
+
+}
+
+.priser2{
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 40px;
+
+}
+
+.priser3{
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 40px;
+
 }
 
 
@@ -974,5 +1051,13 @@ padding: 10px;
   -webkit-animation-name: rubberBand;
           animation-name: rubberBand;
 }
+
+@media screen and (max-width: 900px) {
+  .transparent{
+    flex-direction: column;
+
+  }
+  }
+
 
 </style>
