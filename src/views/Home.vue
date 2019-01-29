@@ -1,8 +1,7 @@
 <template>
 <div>
   <div class=commingSoon>
-       <div id="background" ref="carousel">
-
+    <div id="background" ref="carousel">
    </div>
    </div>
     <div class="searchContainer">
@@ -131,13 +130,21 @@ export default {
   background: rgba(129, 131, 132, 0.3);
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
+  mask-image: linear-gradient(
+   to bottom,
+   rgba(0, 0, 0, 1),
+   rgba(0, 0, 0, 1),
+   rgba(0, 0, 0, 1),
+   rgba(0, 0, 0, 0)
+ );
 }
 #background{
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
-    background: #110101;
-  font-family: 'Roboto', sans-serif;
+    margin-left:  15px;
+    margin-right: 15px;
+  background-color: rgba(129, 131, 132, 0.3);  font-family: 'Roboto', sans-serif;
   overflow: hidden;
   background-size: cover;
  
