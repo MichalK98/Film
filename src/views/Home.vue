@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <div class="commingSoon">
-      <img
-        class="commingSoonImg"
-        src="https://images.alphacoders.com/954/954739.jpg"
-        alt="Comming Soon"
-        width="100%"
-      >
-    </div>
+<div>
+  <div class=commingSoon>
+       <div id="background" ref="carousel">
+
+   </div>
+   </div>
     <div class="searchContainer">
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -77,12 +74,12 @@
       <hr>
       <div class="row">
         <div
-          v-for="(kommandeFilmer, i) in kommandeFilmer"
+          v-for="(kommandeFilm, i) in kommandeFilmer"
           :key="i"
           class="kommandeFilmContainer"
-          :style="{ backgroundImage: `url('${kommandeFilmer.image}')` }"
+          :style="{ backgroundImage: `url('${kommandeFilm.image}')` }"
         >
-          <h2>{{kommandeFilmer.title}}</h2>
+          <h2>{{kommandeFilm.title}}</h2>
         </div>
       </div>
     </div>
@@ -98,22 +95,52 @@ export default {
   data() {
     return {
       items: movies,
-      kommandeFilmer: kommandeFilmer
+      kommandeFilmer: kommandeFilmer,
+      carouselIndex :0
+
     };
+  },
+  created(){
+
+    setTimeout(this.change, 500);
+    setInterval(this.change, 10000);
+  },
+  methods:{
+    change() {
+
+      let doc = this.$refs.carousel;
+        let text = ["Bird Box", "Bee", "A star is born", "Snowden"]
+
+      let image = [`url('https://www.aclusandiego.org/wp-content/uploads/2016/08/Snowden-FB-event.jpg')`,`url('https://vignette.wikia.nocookie.net/universalstudios/images/4/43/Bee-movie-disneyscreencaps.com-154.jpg/revision/latest?cb=20171002183419')`,`url('https://d350x4n02brjm.cloudfront.net/event_images/UqM0PX6tPuiRrbgKVIeYWTNBtX2rQKXhx3yVGryh.png')`,`
+      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEnrOcmVatCqBpnBEA7kzXXL1oCisxxoigakYac0ahPvivuR4j')`];
+          doc.style.backgroundImage = image[this.carouselIndex];
+      this.carouselIndex++;
+      //i = (i + 1) % image.length;
+
+      
+    }
   }
 };
 </script>
 
 <style>
 /*    Comming Soon     */
-.commingSoonImg {
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
-  );
+.commingSoon {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(129, 131, 132, 0.3);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+#background{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background: #110101;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  background-size: cover;
+ 
 }
 
 /*    Searchbar     */
