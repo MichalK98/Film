@@ -111,7 +111,8 @@ export default {
         let text = ["Bird Box", "Bee", "A star is born", "Snowden"]
 
       let image = [`url('https://m.media-amazon.com/images/M/MV5BZWIwY2RjZjMtNGIzNC00ZGNjLTgyMzMtMzgwMzg0ODIyZmE5XkEyXkFqcGdeQXRodW1ibmFpbC1pbml0aWFsaXplcg@@._V1_.jpg')`,`url('http://www.gp.se/image/policy:1.251235:1462491951/Bild-1.jpg?f=Wide&w=1024&$p$f$w=c874468')`,`url('https://d350x4n02brjm.cloudfront.net/event_images/UqM0PX6tPuiRrbgKVIeYWTNBtX2rQKXhx3yVGryh.png')`,`
-      url('https://static.rogerebert.com/uploads/review/primary_image/reviews/bohemian-rhapsody-2018/hero_bohemian-rhapsody-image.jpg')`];
+      url('https://static.rogerebert.com/uploads/review/primary_image/reviews/bohemian-rhapsody-2018/hero_bohemian-rhapsody-image.jpg')`,`
+      url('https://d1jo0zet24jmxt.cloudfront.net/content/12230/1HjKgkIdR2qw8ihM6MTxgdST2kM.jpg')`];
           doc.style.backgroundImage = image[this.carouselIndex];
       this.carouselIndex++;
       //i = (i + 1) % image.length;
