@@ -51,7 +51,11 @@
         {{movie.actors}}
       </li>
     </ul>
-    <button type="button" class="bookingBtn btn btn-outline-success">Boka Nu</button>
+    <button type="button" class="bookingBtn btn btn-outline-success">
+      <router-link :to="'/booking/' + this.$route.params.index" class="nav-link">
+        <span>Boka Nu</span>
+      </router-link>
+    </button>
   </div>
 </template>
 
@@ -72,7 +76,7 @@ export default {
   color: white;
   margin: 15px;
   margin-top: 20px;
-  background-color: rgba(129, 131, 132, 0.3);
+  background-color: rgba(28, 179, 255, 0.3);
 }
 
 ul {
