@@ -110,8 +110,8 @@ export default {
       let doc = this.$refs.carousel;
         let text = ["Bird Box", "Bee", "A star is born", "Snowden"]
 
-      let image = [`url('https://www.aclusandiego.org/wp-content/uploads/2016/08/Snowden-FB-event.jpg')`,`url('https://vignette.wikia.nocookie.net/universalstudios/images/4/43/Bee-movie-disneyscreencaps.com-154.jpg/revision/latest?cb=20171002183419')`,`url('https://d350x4n02brjm.cloudfront.net/event_images/UqM0PX6tPuiRrbgKVIeYWTNBtX2rQKXhx3yVGryh.png')`,`
-      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEnrOcmVatCqBpnBEA7kzXXL1oCisxxoigakYac0ahPvivuR4j')`];
+      let image = [`url('https://m.media-amazon.com/images/M/MV5BZWIwY2RjZjMtNGIzNC00ZGNjLTgyMzMtMzgwMzg0ODIyZmE5XkEyXkFqcGdeQXRodW1ibmFpbC1pbml0aWFsaXplcg@@._V1_.jpg')`,`url('http://www.gp.se/image/policy:1.251235:1462491951/Bild-1.jpg?f=Wide&w=1024&$p$f$w=c874468')`,`url('https://d350x4n02brjm.cloudfront.net/event_images/UqM0PX6tPuiRrbgKVIeYWTNBtX2rQKXhx3yVGryh.png')`,`
+      url('https://static.rogerebert.com/uploads/review/primary_image/reviews/bohemian-rhapsody-2018/hero_bohemian-rhapsody-image.jpg')`];
           doc.style.backgroundImage = image[this.carouselIndex];
       this.carouselIndex++;
       //i = (i + 1) % image.length;
@@ -142,11 +142,9 @@ export default {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
-    margin-left:  15px;
-    margin-right: 15px;
-  background-color: rgba(129, 131, 132, 0.3);  font-family: 'Roboto', sans-serif;
-  overflow: hidden;
-  background-size: cover;
+    background-color: rgba(129, 131, 132, 0.3);  font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    background-size: cover;
  
 }
 
