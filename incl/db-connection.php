@@ -4,7 +4,7 @@
 try{
 
   // anslut
-  $db = new PDO('mysql:host=127.0.0.1;dbname=film', 'root', 'mysql');
+  $db = new PDO('mysql:host=127.0.0.1;dbname=film', 'root', '');
 
   // set errormode (här kan vi välja annan felhantering om vi vill)
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // PDO::ERRMODE_WARNING

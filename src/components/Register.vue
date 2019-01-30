@@ -13,42 +13,63 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+            <h5 class="modal-title" :disabled="loading" @:click="test">Register</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form @submit.prevent="submit">
               <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label for="exampleInputEmail1">Namn</label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
                   id="Eamil2"
                   aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  placeholder="namn"
+                  v-model="firstname" :disabled="loading"
+                  required
                 >
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="Passwors2" placeholder="Password">
+                <label for="exampleInputPassword1">Efternamn</label>
+                <input type="text" class="form-control" id="Passwors2" placeholder="efternamn"
+                v-model="lastname" :disabled="loading"
+                required>
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Repeat Password</label>
+                <label for="exampleInputPassword1">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="email"
+                  v-model="email" :disabled="loading"
+                  required
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Lösenord</label>
                 <input
                   type="password"
                   class="form-control"
-                  id="exampleInputPassword1"
-                  placeholder="Repeat Password"
+                  id="exampleInputPassword2"
+                  placeholder="lösenord"
+                  v-model="password" :disabled="loading"
+                  required
                 >
+              </div>
+              <div>
+                  <span class="msg" v-if="message">{{message}}</span>
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Sign up</button>
-          </div>
+          
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+            <button type="submit" class="btn btn-primary" :disabled="loading"
+            v-on:click.prevent="submit"
+            >Registrera</button>
         </div>
       </div>
     </div>
@@ -56,7 +77,48 @@
 </template>
 
 <script>
+ 
+// import $ from 'jquery'
+import flatpickr from 'flatpickr'
+ 
 export default {
-  name: "Register"
-};
+  name: 'register',
+  data() {
+    return {
+      firstname: '',
+      lastname: '',
+      email: '',
+      password: '',
+      message: '',
+      loading: false,
+      tester: 0
+    };
+  },
+  methods: {
+    submit() { // register
+      this.loading = true;
+      this.message = '';
+      this.$axios.post('register.php', {
+        firstname: this.firstname,
+        lastname: this.lastname,
+        email: this.email,
+        password: this.password
+      }).then(response => {
+        this.loading = false;
+        if(response.data) {
+          this.message = 'Du är nu registrerad';
+        } else {
+          this.message = 'Fel email eller lösenord';
+        }
+      }).catch(error => {
+        this.message = 'Error';
+        console.log('Error', error);
+        this.loading = false;
+      });
+    },
+    test() {
+      console.log(this.tester)
+    }
+  }
+}
 </script>
