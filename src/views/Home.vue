@@ -1,9 +1,13 @@
 <template>
-<div>
-  <div class=commingSoon>
-    <div id="background" ref="carousel">
-   </div>
-   </div>
+  <div>
+    <div class="commingSoon">
+      <img
+        class="commingSoonImg"
+        src="https://images.alphacoders.com/954/954739.jpg"
+        alt="Comming Soon"
+        width="100%"
+      >
+    </div>
     <div class="searchContainer">
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -38,28 +42,14 @@ export default {
 
 <style>
 /*    Comming Soon     */
-.commingSoon {
-  height: 100vh;
-  width: 100vw;
-  background: rgba(129, 131, 132, 0.3);
-  font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+.commingSoonImg {
   mask-image: linear-gradient(
-   to bottom,
-   rgba(0, 0, 0, 1),
-   rgba(0, 0, 0, 1),
-   rgba(0, 0, 0, 1),
-   rgba(0, 0, 0, 0)
- );
-}
-#background{
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-color: rgba(129, 131, 132, 0.3);  font-family: 'Roboto', sans-serif;
-    overflow: hidden;
-    background-size: cover;
- 
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 /*    Searchbar     */

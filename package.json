@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "axios": "^01.18.0",
+    "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
     "flatpickr": "^4.5.2",
     "jquery": "^3.3.1",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",
     "@vue/cli-service": "^3.3.0",
-    "axios": "^01.18.0",
+    "axios": "^0.18.0",
     "vue-cli-plugin-axios": "0.0.4",
     "vue-plugin-axios": "^1.0.14",
     "vue-template-compiler": "^2.5.21"
