@@ -3,24 +3,23 @@
     <div class="movieBackground">
       <div class="movieFilter">
         <div class="movieImg">
-          <img
-            src="http://www.biocapitol.se/images/astarrecposterjpgposter_330.jpg"
-            width="180px"
-            height="250px"
-          >
+          <img :src="movie.images" width="180px" height="250px">
         </div>
         <div class="movieInfo">
           <ul class="infoList">
-            <h1>A Star Is Born</h1>
-            <p>2h 16min | Drama, Music, Romance | 5 October 2018 (USA)</p>
+            <h1>{{movie.title}}</h1>
+            <p>{{movie.length}} | {{movie.genre}} | {{movie.productionYear}}</p>
             <li>
-              <b>Undertext: Sve Text | Eng Tal</b>
+              <b>Undertext:</b>
+              {{movie.subtitles}} | Språk: {{movie.language}}
             </li>
             <li>
-              <b>Producent: Bradley Cooper</b>
+              <b>Producent:</b>
+              {{movie.director}}
             </li>
             <li>
-              <b>Skådespelare: Bradley Cooper, Bradley Cooper, Sam Elliott</b>
+              <b>Skådespelare:</b>
+              {{movie.actors}}
             </li>
           </ul>
         </div>
@@ -106,7 +105,17 @@ export default {
       barn: 0,
       pensionar: 0,
       movie: movies[this.$route.params.index]
+      // movie: {}
     };
+  },
+  created() {
+    this.$axios
+      .get("film.php?id=" + this.$route.params.index + "/booking")
+      .then(response => {
+        this.movie = response.data;
+        // Visa alla medlemar i konsolen
+        console.log(this.movie);
+      });
   },
   methods: {
     toInc() {
@@ -163,7 +172,7 @@ export default {
 }
 
 .movieBackground {
-  background-image: url(https://westernnews.media.clients.ellingtoncms.com/img/photos/2018/10/07/A-Star-is-Born-Trailer.jpg);
+  background-image: url(https://images7.alphacoders.com/389/389458.jpg);
   background-position: center;
   mask-image: linear-gradient(
     to bottom,
@@ -179,7 +188,7 @@ export default {
 }
 
 .movieFilter {
-  background: rgba(26, 29, 33, 0.6);
+  background: rgba(55, 73, 97, 0.6);
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
@@ -191,7 +200,8 @@ export default {
 }
 
 .movieImg {
-  padding: 30px;
+  margin: 30px;
+  box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
 }
 .movieInfo {
   padding: 30px;
@@ -263,7 +273,6 @@ ul {
 }
 /* ----------------------------------------- */
 .seatArea {
-  width: 400px;
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -351,6 +360,9 @@ ul {
     align-items: center;
     justify-content: center;
   }
+  .ticketWrapper {
+    margin: 5px;
+  }
   .prices {
     max-width: 130px;
   }
@@ -367,6 +379,17 @@ ul {
   .movieInfo {
     text-align: left;
     padding: 0px;
+  }
+  .seatArea {
+    padding: 15px;
+  }
+
+  .seat {
+    padding-left: 27px;
+  }
+
+  .seatRow {
+    height: 27px;
   }
 }
 </style>

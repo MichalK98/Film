@@ -52,7 +52,7 @@
       </li>
     </ul>
     <button type="button" class="bookingBtn btn btn-outline-success">
-      <router-link :to="'/booking/' + this.$route.params.index" class="nav-link">
+      <router-link :to="'/booking/' + movie.ID" class="nav-link">
         <span>Boka Nu</span>
       </router-link>
     </button>
@@ -60,12 +60,21 @@
 </template>
 
 <script>
-import movies from "../assets/json/movies.json";
 export default {
+  name: "Film",
   data() {
     return {
-      movie: movies[this.$route.params.index]
+      movie: {}
     };
+  },
+  created() {
+    this.$axios
+      .get("film.php?id=" + this.$route.params.index)
+      .then(response => {
+        this.movie = response.data;
+        // Visa alla medlemar i konsolen
+        console.log(this.movie);
+      });
   }
 };
 </script>
@@ -76,7 +85,7 @@ export default {
   color: white;
   margin: 15px;
   margin-top: 20px;
-  background-color: rgba(28, 179, 255, 0.3);
+  background-color: rgba(129, 131, 132, 0.3);
 }
 
 ul {

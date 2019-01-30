@@ -26,80 +26,16 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
-    <!--Time container-->
-    <div class="movieTimeContainer">
-      <div class="movieTime">
-        <h5>12:30</h5>
-        <h5>9/11</h5>
-      </div>
-      <hr>
-      <!--Movie grid-->
-      <div class="movieGridContainer">
-        <!--Movie-->
-        <div v-for="(item, i) in items" :key="i">
-          <div class="movieContainer" :style="{ backgroundImage: `url('${item.images}')` }">
-            <h2 class="movieTitel">{{item.title}}</h2>
-            <!--More button-->
-            <div class="corner">
-              <router-link :to="'/film/' + i" class="nav-link">
-                <span>Mer</span>
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="movieTimeContainer">
-      <div class="movieTime">
-        <h5>20:45</h5>
-        <h5>9/12</h5>
-      </div>
-      <hr>
-      <!--Movie grid-->
-      <div class="movieGridContainer">
-        <!--Movie-->
-        <div v-for="(item, i) in items" :key="i">
-          <div class="movieContainer" :style="{ backgroundImage: `url('${item.images}')` }">
-            <h2 class="movieTitel">{{item.title}}</h2>
-            <!--More button-->
-            <div class="corner">
-              <router-link :to="'/film/' + i" class="nav-link">
-                <span>Mer</span>
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="komandeFilmGridContainer">
-      <h1>Kommande film</h1>
-      <hr>
-      <div class="row">
-        <div
-          v-for="(kommandeFilmer, i) in kommandeFilmer"
-          :key="i"
-          class="kommandeFilmContainer"
-          :style="{ backgroundImage: `url('${kommandeFilmer.image}')` }"
-        >
-          <h2>{{kommandeFilmer.title}}</h2>
-        </div>
-      </div>
-    </div>
+    <Films/>
   </div>
 </template>
 
 <script>
-import movies from "../assets/json/movies.json";
-import kommandeFilmer from "../assets/json/kommandeFilmer.json";
+import Films from "@/components/Films.vue";
 
 export default {
-  name: "hello",
-  data() {
-    return {
-      items: movies,
-      kommandeFilmer: kommandeFilmer
-    };
+  components: {
+    Films
   }
 };
 </script>
