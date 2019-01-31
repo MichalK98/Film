@@ -15,7 +15,7 @@ export default {
     this.$axios.get("members.php").then(response => {
       let users = response.data;
       // Visa alla medlemar i konsolen
-      console.log(users);
+      // console.log(users);
     });
   }
 };

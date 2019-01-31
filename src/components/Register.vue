@@ -1,5 +1,7 @@
 <template>
   <div>
+    <a v-if="user.firstname" class="nav-link"></a>
+    <a v-else class="nav-link" data-toggle="modal" data-target="#registerModal">Register</a>
     <!-- Button trigger modal -->
     <!-- Modal -->
     <div
@@ -65,11 +67,12 @@
               </div>
             </form>
           </div>
-          
+          <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
             <button type="submit" class="btn btn-primary" :disabled="loading"
             v-on:click.prevent="submit"
             >Registrera</button>
+          </div>
         </div>
       </div>
     </div>
@@ -91,8 +94,16 @@ export default {
       password: '',
       message: '',
       loading: false,
-      tester: 0
+      tester: 0,
+      user: {}
     };
+  },
+  created(){
+    this.$axios.get('user.php').then(response => {
+      this.user = response.data;
+    }).catch(e => {
+      // not logged in
+    });
   },
   methods: {
     submit() { // register

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Users/>
+    <Orders/>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <router-link to="/" class="navbar-brand">
         <img src="../public/logo.png" alt="filmXD" width="40px">
@@ -29,12 +30,13 @@
             <router-link to="/booking" class="nav-link">Booking</router-link>
           </li>
           <li class="nav-item pointer">
-            <a class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
             <Login/>
           </li>
           <li class="nav-item pointer">
-            <a class="nav-link" data-toggle="modal" data-target="#registerModal">Register</a>
             <Register/>
+          </li>
+          <li class="nav-item pointer">
+            <MyOrders/>
           </li>
         </ul>
       </div>
@@ -57,12 +59,16 @@
 import Login from "@/components/Login.vue";
 import Register from "@/components/Register.vue";
 import Users from "@/components/Users.vue";
+import Orders from "@/components/Orders.vue";
+import MyOrders from "@/components/MyOrders.vue";
 
 export default {
   components: {
     Login,
     Register,
-    Users
+    Users,
+    Orders,
+    MyOrders
   }
 };
 </script>

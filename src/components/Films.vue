@@ -35,7 +35,7 @@ export default {
   created() {
     this.$axios.get("films.php").then(response => {
       this.films = response.data;
-      console.log(this.films);
+      // console.log(this.films);
     });
   }
 };

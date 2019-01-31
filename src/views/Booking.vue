@@ -123,24 +123,30 @@ export default {
       this.ordinarie += 85;
     },
     toDec() {
-      this.inc--;
-      this.ordinarie -= 85;
+      if (this.inc != 0) {
+        this.inc--;
+        this.ordinarie -= 85;
+      }
     },
     toInc2() {
       this.inc2++;
       this.barn += 65;
     },
     toDec2() {
-      this.inc2--;
-      this.barn -= 65;
+      if (this.inc2 != 0) {
+        this.inc2--;
+        this.barn -= 65;
+      }
     },
     toInc3() {
       this.inc3++;
       this.pensionar += 75;
     },
     toDec3() {
-      this.inc3--;
-      this.pensionar -= 75;
+      if (this.inc3 != 0) {
+        this.inc3--;
+        this.pensionar -= 75;
+      }
     }
   },
   computed: {

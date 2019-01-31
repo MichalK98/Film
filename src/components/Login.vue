@@ -1,5 +1,7 @@
 <template>
   <div>
+    <a v-if="user.firstname" class="nav-link" v-on:click="logout">Logout</a>
+    <a v-else class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
     <!-- Button trigger modal -->
     <!-- Modal -->
     <div
@@ -19,7 +21,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form @submit.prevent="submit">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input
@@ -28,17 +30,36 @@
                   id="Email1"
                   aria-describedby="emailHelp"
                   placeholder="Enter email"
+                  v-model="email"
+                  :disabled="loading"
+                  required
                 >
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="Password1" placeholder="Password">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="Password1"
+                  placeholder="Password"
+                  v-model="password"
+                  :disabled="loading"
+                  required
+                >
               </div>
             </form>
           </div>
+          <div>
+            <span class="msg" v-if="message">{{message}}</span>
+          </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Sign in</button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              :disabled="loading"
+              v-on:click.prevent="submit"
+            >Logga in</button>
           </div>
         </div>
       </div>
@@ -48,7 +69,82 @@
 
 <script>
 export default {
-  name: "Login"
+  name: "Login",
+  data() {
+    return {
+      email: "",
+      password: "",
+      message: "",
+      loading: false,
+      showingLogin: false,
+      user: {}
+    };
+  },
+  created() {
+    this.$axios
+      .get("user.php")
+      .then(response => {
+        this.user = response.data;
+      })
+      .catch(e => {
+        // not logged in
+      });
+  },
+  methods: {
+    showLogin() {
+      this.showingLogin = true;
+    },
+    cancelLogin(e) {
+      e.preventDefault();
+      this.showingLogin = false;
+    },
+    submit() {
+      // login
+      this.loading = true;
+      this.message = "";
+      this.$axios
+        .post("login.php", {
+          email: this.email,
+          password: this.password
+        })
+        .then(response => {
+          this.loading = false;
+          this.showingLogin = false;
+          if (response.data.loggedIn) {
+            this.user = response.data.user;
+            this.message = "inloggad";
+          } else {
+            this.message = "fel email/lösenord";
+          }
+        })
+        .catch(error => {
+          this.message = "Login error";
+          console.log("login error", error);
+          this.loading = false;
+        });
+    },
+    logout() {
+      this.loading = true;
+      this.$axios
+        .post("logout.php")
+        .then(response => {
+          this.loading = false;
+          this.user = {};
+        })
+        .catch(error => {
+          console.log("logout error", error);
+          this.loading = false;
+        });
+    }
+  },
+  watch: {
+    email() {
+      this.message = "";
+    },
+    password() {
+      this.message = "";
+    }
+  }
 };
 </script>
 
@@ -65,7 +161,7 @@ export default {
 }
 
 .modal-content {
-  background-color: rgb(26, 29, 33) !important;
+  background-color: rgb(4, 6, 8) !important;
   box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
   color: white;
 }
