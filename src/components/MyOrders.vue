@@ -25,16 +25,18 @@
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">Datum</th>
-                  <th scope="col">Biljett</th>
-                  <th scope="col">email</th>
+                  <th scope="col">Plats</th>
+                  <th scope="col">Titel</th>
+                  <th scope="col">Pris</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <!-- <th scope="row">{{orders[0].ID}}</th>
+                  <th scope="row">{{orders[0].ID}}</th>
                   <td>{{orders[0].created}}</td>
-                  <td>{{orders[0].ticket}}</td>
-                  <td>{{orders[0].email}}</td>-->
+                  <td>{{orders[0].plats}}</td>
+                  <td>{{orders[0].titel}}</td>
+                  <td>{{orders[0].pris}}</td>
                 </tr>
               </tbody>
             </table>
@@ -65,7 +67,55 @@ export default {
         this.show = true;
       })
       .catch(e => {
-        console.log("error");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+        console.log("Working");
+
         this.show = false;
       });
   }

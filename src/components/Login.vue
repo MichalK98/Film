@@ -59,6 +59,7 @@
               class="btn btn-primary"
               :disabled="loading"
               v-on:click.prevent="submit"
+              data-dismiss="modal"
             >Logga in</button>
           </div>
         </div>

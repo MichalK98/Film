@@ -30,15 +30,22 @@
                   id="Eamil2"
                   aria-describedby="emailHelp"
                   placeholder="namn"
-                  v-model="firstname" :disabled="loading"
+                  v-model="firstname"
+                  :disabled="loading"
                   required
                 >
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Efternamn</label>
-                <input type="text" class="form-control" id="Passwors2" placeholder="efternamn"
-                v-model="lastname" :disabled="loading"
-                required>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Passwors2"
+                  placeholder="efternamn"
+                  v-model="lastname"
+                  :disabled="loading"
+                  required
+                >
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
@@ -47,7 +54,8 @@
                   class="form-control"
                   id="exampleInputPassword1"
                   placeholder="email"
-                  v-model="email" :disabled="loading"
+                  v-model="email"
+                  :disabled="loading"
                   required
                 >
               </div>
@@ -58,19 +66,24 @@
                   class="form-control"
                   id="exampleInputPassword2"
                   placeholder="lösenord"
-                  v-model="password" :disabled="loading"
+                  v-model="password"
+                  :disabled="loading"
                   required
                 >
               </div>
               <div>
-                  <span class="msg" v-if="message">{{message}}</span>
+                <span class="msg" v-if="message">{{message}}</span>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
-            <button type="submit" class="btn btn-primary" :disabled="loading"
-            v-on:click.prevent="submit"
+            <button
+              type="submit"
+              class="btn btn-primary"
+              data-dismiss="modal"
+              :disabled="loading"
+              v-on:click.prevent="submit"
             >Registrera</button>
           </div>
         </div>
@@ -80,56 +93,62 @@
 </template>
 
 <script>
- 
 // import $ from 'jquery'
-import flatpickr from 'flatpickr'
- 
+import flatpickr from "flatpickr";
+
 export default {
-  name: 'register',
+  name: "register",
   data() {
     return {
-      firstname: '',
-      lastname: '',
-      email: '',
-      password: '',
-      message: '',
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
+      message: "",
       loading: false,
       tester: 0,
       user: {}
     };
   },
-  created(){
-    this.$axios.get('user.php').then(response => {
-      this.user = response.data;
-    }).catch(e => {
-      // not logged in
-    });
+  created() {
+    this.$axios
+      .get("user.php")
+      .then(response => {
+        this.user = response.data;
+      })
+      .catch(e => {
+        // not logged in
+      });
   },
   methods: {
-    submit() { // register
+    submit() {
+      // register
       this.loading = true;
-      this.message = '';
-      this.$axios.post('register.php', {
-        firstname: this.firstname,
-        lastname: this.lastname,
-        email: this.email,
-        password: this.password
-      }).then(response => {
-        this.loading = false;
-        if(response.data) {
-          this.message = 'Du är nu registrerad';
-        } else {
-          this.message = 'Fel email eller lösenord';
-        }
-      }).catch(error => {
-        this.message = 'Error';
-        console.log('Error', error);
-        this.loading = false;
-      });
+      this.message = "";
+      this.$axios
+        .post("register.php", {
+          firstname: this.firstname,
+          lastname: this.lastname,
+          email: this.email,
+          password: this.password
+        })
+        .then(response => {
+          this.loading = false;
+          if (response.data) {
+            this.message = "Du är nu registrerad";
+          } else {
+            this.message = "Fel email eller lösenord";
+          }
+        })
+        .catch(error => {
+          this.message = "Error";
+          console.log("Error", error);
+          this.loading = false;
+        });
     },
     test() {
-      console.log(this.tester)
+      console.log(this.tester);
     }
   }
-}
+};
 </script>

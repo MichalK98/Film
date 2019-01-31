@@ -26,9 +26,6 @@
           <li class="nav-item">
             <router-link to="/about" class="nav-link">Om oss</router-link>
           </li>
-          <li class="nav-item">
-            <router-link to="/booking" class="nav-link">Booking</router-link>
-          </li>
           <li class="nav-item pointer">
             <Login/>
           </li>

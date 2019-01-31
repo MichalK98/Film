@@ -2,8 +2,7 @@
   <!--Time container-->
   <div class="movieTimeContainer">
     <div class="movieTime">
-      <h5>12:30</h5>
-      <h5>9/11</h5>
+      <h5>2019-01-31</h5>
     </div>
     <hr>
     <!--Movie grid-->

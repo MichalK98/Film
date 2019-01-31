@@ -78,12 +78,16 @@
         <div class="seatRow" v-for="seats in rows">
           <label class="seat" v-for="seat in seats" :key="seat">
             <input v-bind:value="seat" type="checkbox">
-            <span class="checkmark"></span>
+            <span v-on:click="sits(seat)" class="checkmark"></span>
           </label>
         </div>
       </div>
-      <button type="button" class="reservategBtn btn btn-outline-success">
-        <span>Slutför reservationen</span>
+      <button
+        v-on:click.prevent="submit"
+        type="submit"
+        class="reservategBtn btn btn-outline-success"
+      >
+        <span>Slutför reservationen {{totalTest}}</span>
       </button>
     </section>
   </div>
@@ -104,7 +108,10 @@ export default {
       ordinarie: 0,
       barn: 0,
       pensionar: 0,
-      movie: movies[this.$route.params.index]
+      movie: movies[this.$route.params.index],
+      titel: "",
+      plats: ""
+
       // movie: {}
     };
   },
@@ -113,6 +120,7 @@ export default {
       .get("film.php?id=" + this.$route.params.index + "/booking")
       .then(response => {
         this.movie = response.data;
+        this.titel = response.data.title;
         // Visa alla medlemar i konsolen
         console.log(this.movie);
       });
@@ -147,6 +155,21 @@ export default {
         this.inc3--;
         this.pensionar -= 75;
       }
+    },
+    submit() {
+      this.$axios
+        .post("place-order.php", {
+          titel: this.titel,
+          plats: this.plats,
+          pris: this.total
+        })
+        .then(response => {
+          console.log("place order response", response);
+        });
+    },
+    sits(pl) {
+      this.plats = pl;
+      console.log(this.plats);
     }
   },
   computed: {

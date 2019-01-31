@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <Date/> -->
     <div class="commingSoon">
       <div id="background" ref="carousel"></div>
     </div>
@@ -23,7 +22,7 @@
       </form>
     </div>
     <Films/>
-    <!-- <Date/> -->
+    <Date/>
   </div>
 </template>
 
@@ -55,8 +54,10 @@ export default {
         `url('https://wallpaperstream.com/wallpapers/full/super-hero/Super-Hero-Ironman-Wallpaper.jpg')`,
         `url('http://images6.fanpop.com/image/photos/35100000/The-Fast-and-the-Furious-Wallpaper-fast-and-furious-35179323-1920-1080.jpg')`
       ];
-      doc.style.backgroundImage = image[this.carouselIndex];
-      this.carouselIndex = (this.carouselIndex + 1) % image.length;
+      if (doc) {
+        doc.style.backgroundImage = image[this.carouselIndex];
+        this.carouselIndex = (this.carouselIndex + 1) % image.length;
+      }
     }
   }
 };
@@ -124,64 +125,39 @@ export default {
 .btn-group button {
   margin-right: 15px;
 }
+/*  */
+/*  */
 /* Movie containers */
 .movieTimeContainer {
   margin: 15px;
   background-color: rgba(129, 131, 132, 0.3);
 }
 .movieTimeContainer h5 {
-  text-align: left;
+  text-align: center;
   color: white;
   padding: 30px 30px 0px;
 }
 .movieTimeContainer hr {
   background-color: white;
-  margin: 0 30px;
+  margin: 0 30px 15px;
 }
 .movieGridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .movieTimeContainer {
+  position: relative;
   margin: 15px;
   background-color: rgba(129, 131, 132, 0.3);
 }
-.row {
-  margin-left: 4px !important;
-  margin-right: 4px !important;
-}
-.komandeFilmGridContainer {
-  margin: 15px;
-  background-color: rgba(129, 131, 132, 0.3);
-}
-.kommandeFilmContainer h2 {
-  background: rgba(26, 29, 33, 0.9);
-  border-width: 40px;
-  color: white;
-  font-size: 150%;
-  padding: 5px;
-}
-.komandeFilmGridContainer hr {
-  background-color: white;
-  margin: 0 30px;
-}
-h1 {
-  color: white !important;
-  padding-top: 15px;
-}
-.kommandeFilmContainer {
-  margin: 15px;
-  height: 300px;
-  width: 280px;
-  margin: 15px auto;
-  background-size: cover;
-  box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
-}
+
 .movieTime {
   display: flex;
+  flex-direction: column;
 }
+
 .movieTime h5 {
-  flex: 1;
+  /* flex: 1; */
 }
 .movieTime h5:nth-child(2) {
   text-align: right;
@@ -223,6 +199,38 @@ h1 {
   font-size: 16px;
   display: block;
   color: white;
+}
+
+.row {
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+}
+.komandeFilmGridContainer {
+  margin: 15px;
+  background-color: rgba(129, 131, 132, 0.3);
+}
+.kommandeFilmContainer h2 {
+  background: rgba(26, 29, 33, 0.9);
+  border-width: 40px;
+  color: white;
+  font-size: 150%;
+  padding: 5px;
+}
+.komandeFilmGridContainer hr {
+  background-color: white;
+  margin: 0 30px;
+}
+h1 {
+  color: white !important;
+  padding-top: 15px;
+}
+.kommandeFilmContainer {
+  margin: 15px;
+  height: 300px;
+  width: 280px;
+  margin: 15px auto;
+  background-size: cover;
+  box-shadow: 0px 0px 8px 2px rgb(26, 29, 33);
 }
 @media screen and (max-width: 900px) {
   .movieGridContainer {
